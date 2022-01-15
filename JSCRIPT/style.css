@@ -1,0 +1,19 @@
+#alert-box {
+    background-color: #82b1ff;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+#alert {
+    background-color: #c382ff;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+button {
+    margin-top:10px;
+}
