@@ -1,0 +1,240 @@
+:root{
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+    
+    /* Size */
+    --padding: 12px;
+    --padding-small: 8px;
+    --avatar-size: 36px;
+    
+    /* Font size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+
+    /* Font bold */
+
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+button, 
+button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+header .logo{
+    font-size: var(--font-large);
+}
+
+header .logo i{
+    color: var(--red-color);
+}
+
+header .icons .fa-search {
+    margin-right: var(--padding);
+}
+
+/* Video player */
+.player {
+    position: sticky;
+    top:0;
+    text-align: center;
+    background-color: var(--black-color);
+}
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 400px;
+}
+
+/* Video info */
+.info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtag {
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+    
+}
+
+.info .metadata .hashtag li {
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+    font-size: var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right: var(--padding);
+
+}   
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+    }
+
+.info .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+/* Action Buttons */
+.info .actions{
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+
+.info .actions button{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    background-color: var(--white-color);
+}
+
+.info .actions button i{
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: 16px;
+    color: var(--grey-dark-color);
+}
+
+.info .actions button i.active {
+    color: var(--blue-color);
+}
+
+/* Channel Descriptions */
+.channel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel .metadata img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+
+.channel .metadata .info .name {
+    font-size: var(--font-medium);
+}
+
+.channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+    background-color: var(--white-color);
+}
+
+
+/* Up next */
+.upNext {
+    padding: 0 var(--padding);
+    font-size: var(--font-medium);
+}
+
+.upNext img {
+    max-height: 150px;
+    width: 500px;
+}
+.upNext > .title {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding) / 2);
+}
+
+.upNext .item {
+    display: flex;
+    margin-top: var(--padding);
+}
+
+.upNext .item .img {
+    flex: 1 1 35%;
+}
+
+.upNext .item .img img {
+    width: 100%;
+}
+
+.upNext .item .info {
+    flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+    flex: 1 1 5%;
+}   
+
+.upNext .item > .info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.upNext .item .info .name {
+    margin-top: var(--padding);
+}
+
+.upNext .item .info .name, .views {
+    color: var(--grey-dark-color);
+}
