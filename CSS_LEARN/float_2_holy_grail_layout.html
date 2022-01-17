@@ -1,0 +1,86 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float2</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        .container{
+            width:640px;
+        }
+        header{
+            border-bottom: 1px solid gray;
+        }
+        nav{
+            float:left;
+            width: 120px;
+            border-right:1px solid gray;
+        }
+        article{
+            float:left;
+            width: 400px;
+            border-left:1px solid gray;
+            border-right:1px solid gray;
+            margin-left:-1px;
+        }
+        aside{
+            float:left;
+            width:120px;
+            border-left:1px solid gray;
+            margin:-1px;
+        }
+        footer{
+            clear:both;
+            border-top:1px solid gray;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body> 
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>CSS</h1>
+        </header>
+    
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li>position</li>
+                <li>float</li>
+                <li>flex</li>
+            </ul>
+        </nav>
+    
+        <!-- Main -->
+        <article>
+            <h2>float</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus maximus ex, vitae suscipit tellus rhoncus
+            quis. Pellentesque ultricies libero nulla, ac egestas mauris dictum et. Mauris semper laoreet dolor, ac laoreet
+            magna tempus suscipit. Nunc maximus odio sed justo mattis aliquam. Proin lobortis nulla vel est hendrerit
+            sodales. Donec quis mi at lacus rhoncus pharetra id ut ligula. Quisque purus mi, convallis non sodales
+            fermentum, hendrerit vitae nisl. Donec quis scelerisque sem. Nunc eget est nec quam eleifend dictum a quis
+            sapien. Nunc iaculis elit mi, vel lobortis neque semper vitae. Nulla vitae sapien venenatis, tempus augue sit
+            amet, volutpat libero. Maecenas eu velit nibh. Sed dictum malesuada orci, at tincidunt metus congue vel. Nam et
+            dui in quam cursus tincidunt. Nunc ut porta purus.
+        </article>
+    
+        <!-- Aside -->
+        <aside>
+            ad
+        </aside>
+    
+        <!-- Footer -->
+        <footer>
+            copyleft
+        </footer>
+    </div>
+</body>
+
+</html>
