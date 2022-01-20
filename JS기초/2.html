@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <div class="alert-box" id='alert'>
+        <p id="title">내용 </p>
+        <button onclick="openbox('none')">
+            X
+        </button>
+    </div>
+    <button onclick="press1('아이디를 입력하세요')">
+        버튼1
+    </button>
+    <button onclick="press1('비밀번호를 입력하세요')">
+        버튼2
+    </button>
+    <script>
+
+        function openbox(구멍){
+            document.getElementById('alert').style.display=구멍;
+        }
+        /* 여러개 쓰고 싶으면 콤마로 구분, 작명 가능*/
+
+        function press1(내용){
+            document.getElementById('title').innerHTML=내용;
+            document.getElementById('alert').style.display='block';
+        }
+
+    </script>
+
+</body>
+</html>
