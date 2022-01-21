@@ -12,3 +12,5 @@ const maxNuber = 5;
 // 4. Variable types
 let x;
 console.log('value:');
+
+console.log('안녕하세요');
