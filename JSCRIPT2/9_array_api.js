@@ -58,23 +58,35 @@ const students = [
 // Q7. make an array containing only the students' scores
 // result should be: [45, 80, 90, 66, 88]
 {
-    
+    const result = students.map((student) => student.score);
+    console.log(result);
 }
 
 // Q8. check if there is a student with the score lower than 50
 {
+    const result = students.some((student) => student.score < 50);
+    console.log(result);
 }
 
 // Q9. compute students' average score
 {
+    const result = students.reduce((prev, curr) => prev + curr.score, 0);
+    console.log(result / students.length);
 }
 
 // Q10. make a string containing all the scores
 // result should be: '45, 80, 90, 66, 88'
 {
+    const result = students.map((student) => student.score);
+    console.log(result);
 }
 
 // Bonus! do Q10 sorted in ascending order
 // result should be: '45, 66, 80, 88, 90'
 {
+    const result = students.map((student) => student.score)
+    .sort((a, b) => a - b)
+    .join();
+    console.log(result);
+
 }
