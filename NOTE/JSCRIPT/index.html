@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JScript</title>
+</head>
+
+<body>
+
+    <!-- 1강 -->
+    <div>
+        <h2 id="hello">Hello world</h2>
+        <div>
+            <span class="line">-----------------------------------------------</span>
+        </div>
+    </div>
+
+    <!-- 2강 -->
+    <div>
+        <div id="alert1">ALERT</div>
+        <button onclick="document.getElementById('alert1').style.display = 'block';">열기1</button>
+        <button onclick="document.getElementById('alert1').style.display = 'none';">닫기1</button>
+        <div>
+            <span class="line">-----------------------------------------------</span>
+        </div>
+    </div>
+
+    <!-- 3강: Function -->
+    <div>
+        <div id="alert2">ALERT</div>
+        <button onclick="open2()">열기2</button>
+        <button onclick="close2()">닫기2</button>
+        <div>
+            <span class="line">-----------------------------------------------</span>
+        </div>
+    </div>
+
+    <!-- 4강: Parameter -->
+    <div>
+        <div id="alert3">ALERT</div>
+        <button onclick="viewOption('block')">열기3</button>
+        <button onclick="viewOption('none')">닫기3</button>
+        <div>
+            <span class="line">-----------------------------------------------</span>
+        </div>
+    </div>
+
+    <!-- 5강: Event listenter -->
+    <div>
+        <div id="alert4">
+            <span id="title">ALERT4</span>
+            <button class ="butttonX" id="close">X</button>
+        </div>
+        <button onclick="openAlert('block', '아이디를 입력하세요')">버튼1</button>
+        <button onclick="openAlert('block', '비밀번호를 입력하세요')">버튼2</button>
+        <div>
+            <span class="line">-----------------------------------------------</span>
+        </div>
+    </div>
+
+    <script>
+
+        // 1강
+        document.getElementById("hello").innerHTML = "안녕하세요.";
+
+        // 2강
+
+        // 3강: function 
+        function open2(hole) {
+            document.getElementById('alert2').style.display = 'hole';
+        }
+        function close2() {
+            document.getElementById('alert2').style.display = 'none';
+        }
+
+        // 4강: parameter
+        function viewOption(how) {
+            document.getElementById('alert3').style.display = how;
+        }
+
+        // 5강: Event listener
+        function openAlert(how, how2) {
+            document.getElementById('alert5').style.display = how;
+            document.getElementById("alert5").innerHTML = how2;
+        }
+
+        function closeBox(){
+            document.getElementById('alert4').style.display = 'none';
+        }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert4').style.display = 'none';
+        })
+
+    </script>
+</body>
+
+</html>

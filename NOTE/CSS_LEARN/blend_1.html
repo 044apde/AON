@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blend</title>
+    <style>
+        .blend{
+            height:400px;
+            width: 700px;
+            border:5px solid;
+            background-color: rgba(255,0,0,0.3);
+            background-image: url(mountains.jpg);
+            background-blend-mode: saturation;
+            transition: background-color 2s;
+        }
+        .blend:hover{
+            background-color: rgba(255,0,0,1);
+            transition: background-color 5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="blend">
+
+    </div>
+</body>
+</html>
