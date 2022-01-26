@@ -26,6 +26,7 @@ body {
 
 }
 
+/* .name만써도 됌 */
 .Logo .logopic .info .name{
     color: #707070;
     font-size: 20px;
@@ -56,6 +57,7 @@ body {
     padding-inline: 5px;
 }
 
+/* .checkbox 만 써도 됌. */
 .IDPW .checkbox{
     color: #707070;
     size: 10px;
