@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+@font-face {
+    font-family: NanumSquareR;
+    src: url(./font/NanumSquareR.otf);
+}
+
+body {
+    font-family: NanumSquareR;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Logo .logopic img{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin-bottom: 5px;
+    margin-top: 250px;
+
+}
+
+.Logo .logopic .info .name{
+    color: #707070;
+    font-size: 20px;
+    top: 489px;
+    margin-bottom: 100px;
+}
+
+.IDPW .inputid input{
+    border: 1px solid #707070;
+    border-radius: 30px 30px 30px 30px;
+    font-size: 14px;
+    width: 400px;
+    height: 25px;
+    top: 583px;
+    margin-top: 60px;
+    margin-bottom: 2px;
+    padding-inline: 5px;
+}
+
+.IDPW .inputpw input{
+    border: 1px solid #707070;
+    border-radius: 30px 30px 30px 30px ;
+    font-size: 14px;
+    width: 400px;
+    height: 25px;
+    top: 651px;
+    margin-bottom: 2px;
+    padding-inline: 5px;
+}
+
+.IDPW .checkbox{
+    color: #707070;
+    size: 10px;
+    font-size: 12px;
+    border-color: #707070;
+    left: 729px;
+    top: 731px;
+    margin-bottom: 5px;
+}
+
+.IDPW .click input{
+    color: white;
+    font-size: 15px;
+    width: 400px;
+    height: 25px;
+    background-color: #707070;
+    border: 1px solid #707070;
+    border-radius: 30px 30px 30px 30px;
+    top: 784px;
+}
