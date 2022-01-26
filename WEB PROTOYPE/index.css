@@ -1,5 +1,3 @@
-
-
 :root{
     /* Color */
     --white-color: #fff;
@@ -12,23 +10,31 @@
     /* Size */
     --padding: 12px;
     --padding-small: 8px;
-    --padding-medium: 12px;
-    --padding-large:16px;
-    --padding-larger:20px;
+    --padding-medium: 14px;
+    --padding-large:18px;
+    --padding-larger:24px;
     --avatar-size: 36px;
-    --padding-logo:60px;
+    --padding-logo:50px;
     --padding-icon: 10px;
+    --padding-searchBar:15px;
 
     /* Font size */
-    --font-large: 18px;
-    --font-medium: 14px;
-    --font-small: 12px;
     --font-micro: 10px;
+    --font-small: 12px;
+    --font-medium: 14.5px;
+    --font-large: 18px;
     --font-logo: 50px;
+    --font--bookmarks: 35px;
 
     /* Box size */
     --box-height-middle: 300px;
     --box-logo: 250px;
+    --box-search: 50px;
+    --box-searchBar-height:40px;
+    --box-searchBar-width: 550px;
+    --box-bookMark-height:250px;
+    --box--bookmarks-width: 500px;
+    --box-footer-height:300px;
 }
 
 @font-face {
@@ -60,7 +66,7 @@ body {
 }
 
 i {
-    color: var(--blue-color);
+    color: var(--black-color);
     padding-left: var(--padding-small);
     padding-right: var(--padding-small);
 }
@@ -74,4 +80,59 @@ i {
     height: var(--box-logo);
     padding-bottom: var(--padding-logo);
     font-size: var(--font-logo);
+}
+
+/* SEARCH */
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--box-search);
+}
+
+#searchbox {
+    height: var(--box-searchBar-height);
+    width: var(--box-searchBar-width);
+    border-radius: 1rem;
+    border: 1px solid gray;
+    padding-left: var(--padding-searchBar);
+    font-size: var(--font-medium);
+}
+
+/* BOOKMARK ICONS */
+.bookmark {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    padding: var(--padding-larger);
+    height: var(--box-bookMark-height);
+}
+
+.bookmarks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    width: var(--box--bookmarks-width);
+}
+
+.bookmark i {
+    font-size: var(--font--bookmarks);
+    color: var(--black-color);
+}
+
+/* FOOTER */
+.footer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: flex-end;
+    padding-top: var(--padding-larger);
+    font-size: var(--font-medium);
 }
