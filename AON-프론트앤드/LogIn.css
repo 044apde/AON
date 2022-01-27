@@ -22,50 +22,48 @@ body {
     height: 50px;
     position: relative;
     margin-bottom: 5px;
-    margin-top: 250px;
+    margin-top: 230px;
 
 }
 
-/* .name만써도 됌 */
-.Logo .logopic .info .name{
+.name{
     color: #707070;
     font-size: 20px;
     top: 489px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
-.IDPW .inputid input{
+.IDPW .inputId input{
     border: 1px solid #707070;
     border-radius: 30px 30px 30px 30px;
     font-size: 14px;
     width: 400px;
     height: 25px;
     top: 583px;
-    margin-top: 60px;
-    margin-bottom: 2px;
+    margin-top: 80px;
+    margin-bottom: 7px;
     padding-inline: 5px;
 }
 
-.IDPW .inputpw input{
+.IDPW .inputPw input{
     border: 1px solid #707070;
     border-radius: 30px 30px 30px 30px ;
     font-size: 14px;
     width: 400px;
     height: 25px;
     top: 651px;
-    margin-bottom: 2px;
+    margin-bottom: 7px;
     padding-inline: 5px;
 }
 
-/* .checkbox 만 써도 됌. */
-.IDPW .checkbox{
+.checkbox{
     color: #707070;
     size: 10px;
     font-size: 12px;
     border-color: #707070;
     left: 729px;
     top: 731px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .IDPW .click input{
