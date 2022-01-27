@@ -6,6 +6,11 @@
     --red-color: #ff0000;
     --grey-dark-color: #909090;
     --grey-light-color: #e0e0e0;
+    --theme-backGround-color: #ffffff;
+    --theme-weight-color: #000000;
+    --theme-light-color: #000000;
+    --theme-font-color: #000000;
+    --theme-logo-color: #000000;
     
     /* Size */
     --padding: 12px;
@@ -32,7 +37,7 @@
     --box-search: 50px;
     --box-searchBar-height:40px;
     --box-searchBar-width: 550px;
-    --box-bookMark-height:250px;
+    --box-bookmark-height:250px;
     --box--bookmarks-width: 500px;
     --box-footer-height:300px;
 }
@@ -48,8 +53,14 @@
     box-sizing:border-box;
 }
 
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--theme-backGround-color);
 }
 
 /* nav */
@@ -66,7 +77,7 @@ body {
 }
 
 i {
-    color: var(--black-color);
+    color: var(--theme-font-color);
     padding-left: var(--padding-small);
     padding-right: var(--padding-small);
 }
@@ -80,6 +91,8 @@ i {
     height: var(--box-logo);
     padding-bottom: var(--padding-logo);
     font-size: var(--font-logo);
+    font-weight: bolder;
+    color: var(--theme-logo-color);
 }
 
 /* SEARCH */
@@ -91,38 +104,55 @@ i {
     height: var(--box-search);
 }
 
-#searchbox {
+#searchBox {
     height: var(--box-searchBar-height);
     width: var(--box-searchBar-width);
     border-radius: 1rem;
-    border: 1px solid gray;
+    border: 2.5px ridge var(--theme-weight-color);;
     padding-left: var(--padding-searchBar);
     font-size: var(--font-medium);
 }
 
 /* BOOKMARK ICONS */
-.bookmark {
+.bookmarkBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	align-content: stretch;
+    padding: var(--padding-larger);
+    height: var(--box-bookmark-height);
+}
+
+.bookmarkBox div {
+    width: var(--box--bookmarks-width);
+    height: var(--box-bookmark-height);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.bookmarkBox a {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    align-content: space-around;
-    padding: var(--padding-larger);
-    height: var(--box-bookMark-height);
-}
-
-.bookmarks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50%;
     width: var(--box--bookmarks-width);
+    
+    
 }
 
-.bookmark i {
+.bookmarkBox a:hover {
+    background-color: #90909034;
+}
+
+.bookmarkBox span {
+    padding-top: var(--padding-small);
+}
+
+.bookmarkBox i {
     font-size: var(--font--bookmarks);
-    color: var(--black-color);
 }
 
 /* FOOTER */
