@@ -139,8 +139,7 @@ i {
     align-items: center;
     justify-content: center;
     width: var(--box--bookmarks-width);
-    
-    
+    font-size: var(--font-small);    
 }
 
 .bookmarkBox a:hover {
