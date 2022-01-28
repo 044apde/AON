@@ -30,6 +30,7 @@
     --font-large: 18px;
     --font-logo: 50px;
     --font--bookmarks: 35px;
+    --font--mainName : 30px;
 
     /* Box size */
     --box-height-middle: 300px;
@@ -59,7 +60,7 @@ a {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: NanumSquareR;
     background-color: var(--theme-backGround-color);
 }
 
