@@ -30,6 +30,7 @@
     --font-large: 18px;
     --font-logo: 50px;
     --font--bookmarks: 35px;
+    --font-page--name: 30px;
 
     /* Box size */
     --box-height-middle: 300px;
@@ -40,6 +41,8 @@
     --box-bookmark-height:250px;
     --box--bookmarks-width: 500px;
     --box-footer-height:300px;
+    --box-searchBox-height-small:28px;
+    --box-searchBar-width-small:300px;
 }
 
 @font-face {
@@ -59,12 +62,11 @@ a {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: NanumSquareR;
     background-color: var(--theme-backGround-color);
 }
 
 /* nav */
-
 .nav {
     display:flex;
     justify-content: space-between;
@@ -80,4 +82,44 @@ i {
     color: var(--theme-font-color);
     padding-left: var(--padding-small);
     padding-right: var(--padding-small);
+}
+
+/* container */
+#container {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    border:1px solid gray;
+}
+
+.inContainer {
+    padding-top: 100px;
+    width: 1000px;
+    border:1px solid gray;
+}
+
+/* main */
+.mainName {
+    font-size: var(--font-page--name);
+}
+
+.mainName span:nth-child(1) {
+    font-weight: bolder;
+}
+
+/* mainNav */
+.searchBar {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchBar input {
+    height: var(--box-searchBox-height-small);
+    width: var(--box-searchBar-width-small);
+    border-radius: 1rem;
+    border: 2px solid var(--theme-weight-color);;
 }

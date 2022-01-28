@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <!-- nav -->
+
+    <!-- NAV -->
     <nav class="nav">
         <div id="nav_main_blank"></div>
         <div id="nav_right_icon">
@@ -21,31 +22,30 @@
         </div>
     </nav>
 
-    <!-- main -->
-    <section>
-        
-        <!-- mainPageName -->
-        <head>
-            <div class="sectionName">전체 공지사항</div>
-        </head>
+    <!-- container -->
+    <div id="container">
 
-        <!-- mainName -->
-        <nav>
-            <div class="searchBar"></div>
-            <div class="ariticleRank"></div>
-        </nav>
+        <div class="inContainer">
 
-        <!-- mainBoard-->
-        <main>
-            <div class="borad"></div>
-        </main>
+            <!-- main -->
+            <div>
+                <div class="mainName"><span>전체</span><span> 게시판</span></div>
+            </div>
 
-        <!-- mainBoardNumber -->
-        <nav>
+            <!-- mainNav -->
+            <div class="mainNav">
+                <div class="searchBar">
+                    <input type="text"/>
+                    <p class="hotArticle">--- --- --- --- --- --- --- --- ---</p>
+                </div>
+                <div class="ranking"></div>
+            </div>
+
+            <!-- mainBoard -->
+            <div class="board"></div>
             <div class="boardNumber"></div>
-        </nav>
-
-    </section>
+        </div>
+    </div>
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/0a6d30b556.js" crossorigin="anonymous"></script>
