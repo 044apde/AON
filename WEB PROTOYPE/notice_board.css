@@ -1,0 +1,83 @@
+:root{
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #3F77A4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+    --theme-backGround-color: #ffffff;
+    --theme-weight-color: #000000;
+    --theme-light-color: #000000;
+    --theme-font-color: #000000;
+    --theme-logo-color: #000000;
+    
+    /* Size */
+    --padding: 12px;
+    --padding-small: 8px;
+    --padding-medium: 14px;
+    --padding-large:18px;
+    --padding-larger:24px;
+    --avatar-size: 36px;
+    --padding-logo:50px;
+    --padding-icon: 10px;
+    --padding-searchBar:15px;
+
+    /* Font size */
+    --font-micro: 10px;
+    --font-small: 12px;
+    --font-medium: 14.5px;
+    --font-large: 18px;
+    --font-logo: 50px;
+    --font--bookmarks: 35px;
+
+    /* Box size */
+    --box-height-middle: 300px;
+    --box-logo: 250px;
+    --box-search: 50px;
+    --box-searchBar-height:40px;
+    --box-searchBar-width: 550px;
+    --box-bookmark-height:250px;
+    --box--bookmarks-width: 500px;
+    --box-footer-height:300px;
+}
+
+@font-face {
+    font-family: NanumSquareR;
+    src: url(./font/NanumSquareR.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--theme-backGround-color);
+}
+
+/* nav */
+
+.nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--padding-larger);
+}
+
+#nav_right_icon {
+    padding-right: var(--padding-icon);
+}
+
+i {
+    color: var(--theme-font-color);
+    padding-left: var(--padding-small);
+    padding-right: var(--padding-small);
+}
