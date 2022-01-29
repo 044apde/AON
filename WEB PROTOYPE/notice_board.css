@@ -137,6 +137,8 @@ i {
 
 /* mainBorad */
 .board {
+    display: flex;
+    flex-direction: column;
     padding-top: var(--padding-larger);
     height: 400px;
 }
@@ -184,4 +186,8 @@ i {
 .numbering tr {
     display: flex;
     justify-content: space-between;
+}
+
+td {
+    flex-shrink: 2;
 }
