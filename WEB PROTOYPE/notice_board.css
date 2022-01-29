@@ -92,13 +92,11 @@ i {
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-    border:1px solid gray;
 }
 
 .inContainer {
     padding-top: 100px;
-    width: 1000px;
-    border:1px solid gray;
+    width: 1200px;
 }
 
 /* main */
@@ -111,15 +109,79 @@ i {
 }
 
 /* mainNav */
-.searchBar {
+.mainNav {
     padding-top: 30px;
     display: flex;
-    justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
 }
 
-.searchBar input {
+.searchBar {
     height: var(--box-searchBox-height-small);
     width: var(--box-searchBar-width-small);
     border-radius: 1rem;
-    border: 2px solid var(--theme-weight-color);;
+    border: 2px solid var(--theme-weight-color);
+    padding-left: var(--padding-searchBar);
+}
+
+.mainNav i {
+    color: var(--red-color);
+}
+
+.hotArticle {
+    padding-right: 20px;
+}
+
+/* mainBorad */
+.board {
+    padding-top: var(--padding-larger);
+    height: 400px;
+}
+
+.boardTalbe {
+    color: gray;
+    width: 100%;
+    border:1px solid black;
+    padding: 0px 20px;
+    border-spacing: 0 10px;
+}
+
+#classification {
+    width: 70px;
+}
+
+#title {
+    width: 800px;
+}
+
+#writer {
+    width: 200px;
+}
+
+#date {
+    width:90px;
+}
+
+/* boardNumber */
+.boardNumber {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: stretch;
+    
+    margin-top: var(--padding-large);
+}
+
+.numbering {
+    width: 400px;
+    align-items: center;
+}
+
+.numbering tr {
+    display: flex;
+    justify-content: space-between;
 }
