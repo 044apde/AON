@@ -54,6 +54,7 @@
     padding: 0;
     margin: 0;
     box-sizing:border-box;
+    
 }
 
 a {
@@ -63,7 +64,13 @@ a {
 
 body {
     font-family: NanumSquareR;
+    height: 100%;
+    background-image: url(./image/layered-waves-haikei.svg);
     background-color: var(--theme-backGround-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 /* nav */
