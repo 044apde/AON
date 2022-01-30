@@ -21,7 +21,7 @@
     --avatar-size: 36px;
     --padding-logo:50px;
     --padding-icon: 10px;
-    --padding-searchBar:15px;
+    --padding-searchBar:30px;
 
     /* Font size */
     --font-micro: 10px;
@@ -85,7 +85,7 @@ body {
     padding-right: var(--padding-icon);
 }
 
-i {
+#nav_right_icon i {
     color: var(--theme-font-color);
     padding-left: var(--padding-small);
     padding-right: var(--padding-small);
@@ -134,8 +134,15 @@ i {
     padding-left: var(--padding-searchBar);
 }
 
-.mainNav i {
-    color: var(--red-color);
+.mainNav i:nth-child(1) {
+    color: red;
+}
+
+.mainNav i:nth-child(2) {
+    color: black;
+    position: absolute;
+    padding-left: 10px;
+    padding-bottom: 0.5px;
 }
 
 .hotArticle {
@@ -188,6 +195,7 @@ i {
 .numbering {
     width: 400px;
     align-items: center;
+    border: 1px solid black;
 }
 
 .numbering tr {
@@ -195,6 +203,12 @@ i {
     justify-content: space-between;
 }
 
-td {
-    flex-shrink: 2;
+.numbering td {
+    width:100%;
+    text-align: center;
+    border-left: 1px solid black;
+}
+
+.numbering td:nth-child(1){
+    border: 0px;
 }
