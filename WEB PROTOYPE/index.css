@@ -9,8 +9,8 @@
     --theme-backGround-color: #ffffff;
     --theme-weight-color: #000000;
     --theme-light-color: #000000;
-    --theme-font-color: #000000;
-    --theme-logo-color: #000000;
+    --theme-font-color: #0b326d;
+    --theme-logo-color: #0b326d;
     
     /* Size */
     --padding: 12px;
@@ -62,6 +62,13 @@ a {
 body {
     font-family: NanumSquareR;
     background-color: var(--theme-backGround-color);
+    height: 100%;
+    background-image: url(./image/layered-waves-haikei.svg);
+    background-color: var(--theme-backGround-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 /* nav */
@@ -96,6 +103,7 @@ i {
     color: var(--theme-logo-color);
 }
 
+
 /* SEARCH */
 
 .search {
@@ -109,9 +117,10 @@ i {
     height: var(--box-searchBar-height);
     width: var(--box-searchBar-width);
     border-radius: 1rem;
-    border: 2.5px ridge var(--theme-weight-color);;
+    border: 3px ridge var(--theme-logo-color);;
     padding-left: var(--padding-searchBar);
     font-size: var(--font-medium);
+    color: 
 }
 
 /* BOOKMARK ICONS */
