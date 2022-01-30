@@ -7,10 +7,10 @@
     --grey-dark-color: #909090;
     --grey-light-color: #e0e0e0;
     --theme-backGround-color: #ffffff;
-    --theme-weight-color: #000000;
-    --theme-light-color: #000000;
-    --theme-font-color: #0b326d;
-    --theme-logo-color: #0b326d;
+    --theme-weight-color: #13428a;
+    --theme-light-color: #13428a;
+    --theme-font-color: #13428a;
+    --theme-logo-color: #13428a;
     
     /* Size */
     --padding: 12px;
@@ -117,10 +117,10 @@ i {
     height: var(--box-searchBar-height);
     width: var(--box-searchBar-width);
     border-radius: 1rem;
-    border: 3px ridge var(--theme-logo-color);;
+    border: 3px solid var(--theme-weight-color);;
     padding-left: var(--padding-searchBar);
     font-size: var(--font-medium);
-    color: 
+    color: var(--theme-font-color)
 }
 
 /* BOOKMARK ICONS */
