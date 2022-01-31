@@ -1,16 +1,17 @@
 :root{
     /* Color */
-    --white-color: #fff;
+    --white-color: #ffffff;
     --black-color: #140a00;
-    --blue-color: #3F77A4;
+    --blue-ligth-color: #d6ece8;
+    --blue-dark-color: #557ab3;
     --red-color: #ff0000;
-    --grey-dark-color: #909090;
-    --grey-light-color: #e0e0e0;
+    --grey-dark-color: #707070;
+    --grey-light-color: #cecece;
     --theme-backGround-color: #ffffff;
-    --theme-weight-color: #13428a;
-    --theme-light-color: #13428a;
-    --theme-font-color: #13428a;
-    --theme-logo-color: #13428a;
+    --theme-weight-color: #707070;
+    --theme-light-color: #707070;
+    --theme-font-color: #707070;
+    --theme-logo-color: #707070;
     
     /* Size */
     --padding: 12px;
@@ -24,13 +25,13 @@
     --padding-searchBar:15px;
 
     /* Font size */
-    --font-micro: 10px;
-    --font-small: 12px;
-    --font-medium: 14.5px;
-    --font-large: 18px;
-    --font-logo: 50px;
+    --font-micro: 14px;
+    --font-small: 16px;
+    --font-medium: 20px;
+    --font-large: 28px;
+    --font-logo: 60px;
     --font--bookmarks: 35px;
-    --font--mainName : 30px;
+    --font--mainName : 40px;
 
     /* Box size */
     --box-height-middle: 300px;
@@ -74,7 +75,7 @@ body {
 /* nav */
 
 .nav {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: var(--padding-larger);
@@ -117,10 +118,10 @@ i {
     height: var(--box-searchBar-height);
     width: var(--box-searchBar-width);
     border-radius: 1rem;
-    border: 3px solid var(--theme-weight-color);;
+    border: 1px solid var(--theme-weight-color);
     padding-left: var(--padding-searchBar);
-    font-size: var(--font-medium);
-    color: var(--theme-font-color)
+    font-size: var(--font-small);
+    color: var(--grey-light-color);
 }
 
 /* BOOKMARK ICONS */
@@ -153,7 +154,7 @@ i {
 }
 
 .bookmarkBox a:hover {
-    background-color: #90909034;
+    background-color: #70707018;
 }
 
 .bookmarkBox span {
