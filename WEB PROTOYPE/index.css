@@ -26,8 +26,8 @@
 
     /* Font size */
     --font-micro: 14px;
-    --font-small: 16px;
-    --font-medium: 20px;
+    --font-small: 8px;
+    --font-medium: 14px;
     --font-large: 28px;
     --font-logo: 60px;
     --font--bookmarks: 35px;
@@ -200,7 +200,7 @@ i {
     border-radius: 1rem;
     border: 1px solid var(--theme-weight-color);
     padding-left: var(--padding-searchBar);
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
     color: var(--grey-light-color);
 }
 
@@ -230,7 +230,7 @@ i {
     align-items: center;
     justify-content: center;
     width: var(--box--bookmarks-width);
-    font-size: var(--font-small);    
+    font-size: var(--font-medium);    
 }
 
 .bookmarkBox a:hover {
