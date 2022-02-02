@@ -91,6 +91,36 @@ body {
     padding-right: var(--padding-small);
 }
 
+.dropdown-bar {
+    position: relative;
+    display:inline-block;
+}
+
+.bar-content {
+    display: none;
+    position: absolute;
+    transform: translateX(-65%);
+    background-color: #f9f9f9;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-bar:hover .bar-content {
+    display: block;
+}
+
+.bar-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: var(--font-small);
+    display: block;
+}
+
+.bar-content a:hover { background-color: var(--grey-light-color);}
+
 /* container */
 #container {
     display: flex;
