@@ -1,17 +1,22 @@
 :root{
     /* Color */
-    --white-color: #fff;
+    --white-color: #ffffff;
     --black-color: #140a00;
-    --blue-color: #3F77A4;
+    --blue-ligth-color: #d6ece8;
+    --blue-dark-color: #557ab3;
     --red-color: #ff0000;
-    --grey-dark-color: #909090;
-    --grey-light-color: #e0e0e0;
-    --theme-backGround-color: #ffffff;
-    --theme-weight-color: #000000;
-    --theme-light-color: #000000;
-    --theme-font-color: #000000;
-    --theme-logo-color: #000000;
+    --grey-light-color: #cecece;
+    --grey-dark-color: #707070;
     
+     /* Font size */
+    --font-micro: 14px;
+    --font-small: 16px;
+    --font-medium: 20px;
+    --font-large: 28px;
+    --font-logo: 60px;
+    --font--bookmarks: 35px;
+    --font--mainName : 40px;
+
     /* Size */
     --padding: 12px;
     --padding-small: 8px;
@@ -22,15 +27,6 @@
     --padding-logo:50px;
     --padding-icon: 10px;
     --padding-searchBar:30px;
-
-    /* Font size */
-    --font-micro: 10px;
-    --font-small: 12px;
-    --font-medium: 14.5px;
-    --font-large: 18px;
-    --font-logo: 50px;
-    --font--bookmarks: 35px;
-    --font-page--name: 30px;
 
     /* Box size */
     --box-height-middle: 300px;
@@ -94,7 +90,7 @@ i {
 
 .dropdown-bar {
     position: relative;
-    display:inline-block;
+    display: inline-block;
 }
 
 .bar-content {

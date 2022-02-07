@@ -5,17 +5,41 @@
     --blue-ligth-color: #d6ece8;
     --blue-dark-color: #557ab3;
     --red-color: #ff0000;
+    --grey-light-color: #cecece;
     --grey-dark-color: #707070;
-    --grey-light-color: #e0e0e0;
+    --grey-background-color: #70707018;
 
     /* Font size */
-    --font-micro: 14px;
-    --font-small: 16px;
-    --font-medium: 20px;
+    --font-micro: 10px;
+    --font-small: 14px;
+    --font-medium: 16px;
     --font-large: 28px;
     --font-logo: 60px;
     --font--bookmarks: 35px;
     --font--mainName : 40px;
+
+    /* Size */
+    --padding: 12px;
+    --padding-small: 8px;
+    --padding-medium: 14px;
+    --padding-large:18px;
+    --padding-larger:24px;
+    --avatar-size: 36px;
+    --padding-logo:50px;
+    --padding-icon: 10px;
+    --padding-searchBar:30px;
+
+    /* Box size */
+    --box-height-middle: 300px;
+    --box-logo: 250px;
+    --box-search: 50px;
+    --box-searchBar-height:40px;
+    --box-searchBar-width: 550px;
+    --box-bookmark-height:250px;
+    --box--bookmarks-width: 500px;
+    --box-footer-height:300px;
+    --box-searchBox-height-small:28px;
+    --box-searchBar-width-small:300px;
 }
 
 * {
@@ -43,56 +67,62 @@ body {
     position: relative;
     margin-bottom: 5px;
     margin-top: 250px;
-
 }
 
 .Logo .logopic .info .name{
     color: var(--grey-dark-color);
-    font-size: var(--font-medium);
-    top: 489px;
+    font-size: var(--font-large);
+    /*top: 489px;*/
     margin-bottom: 100px;
+}
+
+.inputid * {
+    font-family: NanumSquareR;
+    src: url(./font/NanumSquareR.otf);
 }
 
 .IDPW .inputid input{
     border: 1px solid var(--grey-dark-color);
-    border-radius: 30px 30px 30px 30px;
-    font-size: var(--font-micro);
+    border-radius: 30px;
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
     width: 400px;
-    height: 25px;
-    top: 583px;
+    height: 45px;
+    /*top: 583px;*/
     margin-top: 60px;
-    margin-bottom: 2px;
-    padding-inline: 5px;
+    margin-bottom: 10px;
+    padding-inline: 20px;
+    outline: none;
 }
 
 .IDPW .inputpw input{
     border: 1px solid var(--grey-dark-color);
-    border-radius: 30px 30px 30px 30px ;
-    font-size: var(--font-micro);
+    border-radius: 30px;
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
     width: 400px;
-    height: 25px;
-    top: 651px;
-    margin-bottom: 2px;
-    padding-inline: 5px;
+    height: 45px;
+    /*top: 651px;*/
+    margin-bottom: 20px;
+    padding-inline: 20px;
+    outline: none;
 }
 
 .IDPW .checkbox{
     color: var(--grey-dark-color);
-    size: 10px;
-    font-size: var(--font-micro);
-    border-color: var(--grey-dark-color);
-    left: 729px;
-    top: 731px;
-    margin-bottom: 5px;
+    font-size: var(--font-medium);
+    /*left: 729px;
+    top: 731px;*/
+    margin-bottom: 20px;
 }
 
 .IDPW .click input{
     color: var(--white-color);
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
     width: 400px;
-    height: 25px;
+    height: 45px;
     background-color: var(--grey-dark-color);
     border: 1px solid var(--grey-dark-color);
-    border-radius: 30px 30px 30px 30px;
-    top: 784px;
+    border-radius: 30px;
+    /*top: 784px;*/
 }
