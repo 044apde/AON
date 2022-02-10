@@ -59,6 +59,12 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    background-image: url(./image/layered-waves-haikei.svg);
+    background-color: var(--white-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 
 .Logo .logopic img{
