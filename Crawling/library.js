@@ -15,6 +15,8 @@ const parsing = async () => {
     const $ = cheerio.load(html.data);
     const $list = $(".ikc-tablelist").children('.ikc-item.ng-scope');
 
+    console.log($list);
+    
     let data = [];
 
     $list.each((idx, node) => {
