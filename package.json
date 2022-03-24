@@ -1,0 +1,30 @@
+{
+  "name": "aon",
+  "version": "1.0.0",
+  "description": "Community for ERICA",
+  "scripts": {
+    "dev": "nodemon -L --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/044apde/AON.git"
+  },
+  "author": "kkshin044",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/044apde/AON/issues"
+  },
+  "homepage": "https://github.com/044apde/AON#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "nodemon": "^2.0.15"
+  }
+}
