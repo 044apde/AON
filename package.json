@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Community for ERICA",
   "scripts": {
-    "dev": "nodemon -L --exec babel-node index.js"
+    "dev": "nodemon --exec babel-node ./src/init.js"
   },
   "repository": {
     "type": "git",
