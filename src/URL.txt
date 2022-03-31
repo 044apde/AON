@@ -1,0 +1,15 @@
+/ -> globalRouter
+/join
+/login 
+
+/mwmting -> mwmRouter
+/mwmting/ -> mwmboard
+
+/users -> usersRouter
+/:id -> user
+/:id/editUser -> edituser
+
+/boards -> boardRouter 
+/boards/:board -> watchBoard 
+/board/:board/:no -> watchContent
+/board/:board/:upload -> upload 

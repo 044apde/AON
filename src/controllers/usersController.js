@@ -1,4 +1,6 @@
-import res from "express/lib/response";
+export const user = (req, res) => {
+    return res.render("user", {pageTitle: "USER PAGE"});
+}
 
 export const join = (req, res) => {
     return res.render("join", {pageTitle: "JOIN"});
