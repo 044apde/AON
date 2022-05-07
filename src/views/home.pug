@@ -1,1 +1,184 @@
-extends base.pug
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='home.css')
+  title Meal With Me
+  
+// 왼쪽 바
+.container
+  .imgcontainer
+    img.logo(src='logo.png' alt='logo')
+  .user
+    img.selfie(scr='./download.jpeg' alt='selfie')
+    label.unick(for='unick')
+      br
+      | usernickname
+      br
+    label.uid(for='uid')
+      | userid
+      br
+    label.ucampus(for='ucampus')
+      br
+      | usercampus
+      br
+    label.ulevel(for='ulevel')
+      | userlevel
+      br
+    button.information(type='button') 내정보
+
+// 네비게이션 바
+.navbar
+  nav
+    ul.menu
+      li
+        a(href='#') &#xD648;
+      li
+        a(href='#') &#xBBB4;&#xD305;
+      li
+        a(href='#') &#xAC8C;&#xC2DC;&#xD310;
+    ul.downmenu
+      li
+        a(href='#') &#xC790;&#xC720;
+      li
+        a(href='#') &#xCDE8;&#xCC3D;&#xC5C5;
+      li
+        a(href='#') &#xD64D;&#xBCF4;
+      li
+        a(href='#') &#xC815;&#xBCF4;
+      li
+        a(href='#') &#xC7A5;&#xD130;
+.content
+  // 실시간 인기글
+  .hotarticle
+    h3
+      img.fire(src='fire.png' alt='fire')
+      a &#xC2E4;&#xC2DC;&#xAC04; &#xC778;&#xAE30;&#xAE00;
+      a.article(href='#')
+  // 검색바
+  .search
+    form
+      input.text(type='textg' name='keyword' placeholder='찾고 싶은 글을 검색하세요!')
+  // 게시판들
+  .main.articles
+    .card
+      h3
+        a(href='#') &#xBBB4;&#xD305;
+      a(href='#')
+        p &#xBC25; &#xD55C; &#xB07C; &#xBA39;&#xB294; &#xAC00;&#xBCBC;&#xC6B4; &#xC18C;&#xAC1C;&#xD305; &#xC5B4;&#xB54C;&#xC694;?
+    .card
+      h3
+        a(href='#') &#xC790;&#xC720;&#xAC8C;&#xC2DC;&#xD310;
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;1
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;2
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;3
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;4
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;5
+        hr
+    .card
+      h3
+        a(href='#') &#xCDE8;&#xCC3D;&#xC5C5;&#xAC8C;&#xC2DC;&#xD310;
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;1
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;2
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;3
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;4
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;5
+        hr
+    .card
+      h3
+        a(href='#') &#xC815;&#xBCF4;&#xAC8C;&#xC2DC;&#xD310;
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;1
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;2
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;3
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;4
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;5
+        hr
+    .card
+      h3
+        a(href='#') &#xD64D;&#xBCF4;&#xAC8C;&#xC2DC;&#xD310;
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;1
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;2
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;3
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;4
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;5
+        hr
+    .card
+      h3
+        a(href='#') &#xC7A5;&#xD130;&#xAC8C;&#xC2DC;&#xD310;
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;1
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;2
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;3
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;4
+        hr
+      a.list(href='#')
+        time &#xC2DC;&#xAC04;
+        p &#xC81C;&#xBAA9;5
+        hr
