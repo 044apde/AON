@@ -1,11 +1,11 @@
 import express from "express";
 import {home} from "../controllers/boardController";
-import {join, login} from "../controllers/usersController";
+import {getJoin, postJoin, login} from "../controllers/usersController";
 
 const globalRouter = express.Router();
 
 globalRouter.get("/", home);
-globalRouter.get("/join", join);
+globalRouter.route("/join").get(getJoin).post(postJoin)
 globalRouter.get("/login", login);
 
 export default globalRouter;
