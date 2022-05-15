@@ -3,7 +3,6 @@ import morgan from "morgan";
 import globalRouter from "./routers/globalRouter";
 import boardRouter from "./routers/boardRouter";
 import usersRouter from "./routers/usersRouter";
-import mwmRouter from "./routers/mwmRouter";
 
 const app = express(); 
 const logger = morgan("dev");
@@ -19,7 +18,5 @@ app.use(express.urlencoded({extended: true}));
 app.use("/", globalRouter);
 app.use("/boards", boardRouter);
 app.use("/users", usersRouter); 
-app.use("/mwmting", mwmRouter);
-
 export default app;
 
