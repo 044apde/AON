@@ -8,6 +8,8 @@ html(lang="ko")
         title 회원가입
     
     body 
+        if errorMessage
+            span=errorMessage
         form(method = "POST")
             input(placeholder="이름 입력", name="name", type="text", required)
             input(placeholder="이메일", name="email", type="email", required)
