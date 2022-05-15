@@ -1,1 +1,25 @@
-extends base.pug
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  style
+    include ./css/login.css
+  title Meal With Me
+
+form(action='action_page.php' method='post')
+  .imgcontainer
+    img.avatar(src='img_avatar2.png' alt='Avatar')
+  .container
+    label(for='uname')
+      b ID
+    input(type='text' placeholder='아이디를 입력하세요' name='uname' required='')
+    label(for='psw')
+      b Password
+    input(type='password' placeholder='비밀번호를 입력하세요' name='psw' required='')
+    label
+      input(type='checkbox' checked='checked' name='remember')
+      |  &#xB85C;&#xADF8;&#xC778; &#xC0C1;&#xD0DC; &#xC720;&#xC9C0;
+    button(type='submit') Login
+    button.register(type='button') &#xD68C;&#xC6D0;&#xAC00;&#xC785;
+    button.forgot(type='button') &#xC544;&#xC774;&#xB514;/&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xCC3E;&#xAE30;
