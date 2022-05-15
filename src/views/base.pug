@@ -1,0 +1,33 @@
+doctype html
+html(lang="ko")
+    head  
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Meal With Me
+        style 
+            include ./css/base.css
+
+    body 
+        .container
+            .imgcontainer
+                img.logo(src='logo.png' alt='logo')
+            .user
+                img.selfie(scr='./download.jpeg' alt='selfie')
+                label.unick(for='unick')
+                br
+                | usernickname
+                br
+                label.uid(for='uid')
+                | userid
+                br
+                label.ucampus(for='ucampus')
+                br
+                | usercampus
+                br
+                label.ulevel(for='ulevel')
+                | userlevel
+                br
+                button.information(type='button') 내정보
+
+        block content 
