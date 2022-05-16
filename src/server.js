@@ -7,6 +7,8 @@ import usersRouter from "./routers/usersRouter";
 const app = express(); 
 const logger = morgan("dev");
 
+app.use(express.static('src/views'));
+
 app.set("view engine", "pug");
 app.set("views", process.cwd() + "/src/views");
 
@@ -17,6 +19,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use("/", globalRouter);
 app.use("/boards", boardRouter);
-app.use("/users", usersRouter); 
+app.use("/users", usersRouter);
+
 
 export default app;   
