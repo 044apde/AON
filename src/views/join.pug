@@ -1,12 +1,13 @@
 extends base.pug
 
 block content
-    body 
-        if errorMessage
-            span=errorMessage
-        form(method = "POST")
-            input(placeholder="이름 입력", name="name", type="text", required)
-            input(placeholder="이메일", name="email", type="email", required)
-            input(placeholder="비밀번호 입력", name="password", type="password", required)
-            input(placeholder="비밀번호 확인", name="password2", type="password", required)
-            input(type="submit", value="회원가입")
+    style  
+        include ./styles/join.css
+    if errorMessage
+        span=errorMessage
+    form(method = "POST").joinFormBox
+        input(placeholder="이름 입력", name="name", type="text", required)
+        input(placeholder="이메일", name="email", type="email", required)
+        input(placeholder="비밀번호 입력", name="password", type="password", required)
+        input(placeholder="비밀번호 확인", name="password2", type="password", required)
+        input(type="submit", value="회원가입")
