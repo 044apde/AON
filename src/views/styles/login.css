@@ -28,6 +28,7 @@ button {
     position: absolute;
     top: 50%;
     left: 30%;
+    width: 300px;
 }
 
   /* Avatar image */

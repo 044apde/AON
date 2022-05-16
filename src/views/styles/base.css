@@ -11,15 +11,6 @@
     text-align: center;
 }
 
-.imagecontainer
-{
-    position: absolute;
-    width: 200px;
-    top: 200px;
-    margin-top: 200px;
-    margin-bottom: 200px;
-}
-
 .user{
     position: absolute;
     margin-top: 200px;
@@ -28,4 +19,9 @@
     height: 260px;
     line-height: 15pt;
     font-size: 14pt;
+}
+
+.logo{
+    width: 120px;
+    margin-top: 20px;
 }

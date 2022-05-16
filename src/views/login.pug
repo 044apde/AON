@@ -6,11 +6,10 @@ head
   style
     include ./styles/login.css
   title Meal With Me
-    
+
   body
-    img(src="images/logo.png" alt = `imge`)
+    img.imgcontainer(src="images/logo.png" alt = `imge`)
     form(action='action_page.php' method='post')
-      .imgcontainer
       .container
         label(for='uname')
           b ID
@@ -18,9 +17,6 @@ head
         label(for='psw')
           b Password
         input(type='password' placeholder='비밀번호를 입력하세요' name='psw' required='')
-        label
-          input(type='checkbox' checked='checked' name='remember')
-          |  &#xB85C;&#xADF8;&#xC778; &#xC0C1;&#xD0DC; &#xC720;&#xC9C0;
         button(type='submit') Login
         button.register(type='button' onclick = "location.href = '/join' ") 회원가입
         button.forgot(type='button') 아이디/비밀번호 찾기

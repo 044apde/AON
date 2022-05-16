@@ -21,5 +21,4 @@ app.use("/", globalRouter);
 app.use("/boards", boardRouter);
 app.use("/users", usersRouter);
 
-
 export default app;   
