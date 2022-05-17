@@ -2,28 +2,24 @@ doctype html
 html(lang="ko")
     head  
         meta(charset='UTF-8')
-        meta(http-equiv='X-UA-Compatible' content='IE=edge')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        title Meal With Me
         link(rel="stylesheet" href="./styles/base.css")
+        title Meal With Me
 
-    body 
-        div.lefeSideBox
-            a(href="/")
-                img.logo(src='images/logo.png' alt='logo')
-            div.userBox
-                label(for='unick')
-                    p usernickname
-                label(for='uid')
-                    p userid
-                label(for='ucampus')
-                    p usercampus
-                label(for='ulevel')
-                    p userlevel
-                button.myProfileBtn(type='button') 내 정보
-        
-        div.mainBox
-            div.topNav
-                p Hi
-
+    body         
+        div.wrap
+            div.sideBox
+                div.logoBox
+                    img.logo(src="images/logo.png" alt = `logo`)
+                div.profileBox
+                    img.profileImage(src="images/profile_icon.png" alt = "profile_icon")
+                    p 이름 
+                    p /n (아이디)
+                    p 캠퍼스명 
+                    p /n (회원등급)
+                    button.goProfileBtn(type='button' onclick = "location.href = '/proflie'") 내 정보
+            div.mainBox
+                div.nav
+                dib.searchBox
+                dib.contents
         block content 
