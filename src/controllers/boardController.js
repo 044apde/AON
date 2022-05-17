@@ -13,6 +13,6 @@ export const watchContent = (req, res) => {
     return res.render("watch", {pageTitle: "Watch"});
 };
 
-export const upload = (req, res) => {
+export const writing = (req, res) => {
     return res.render("upload", {pageTitle: "upload"});
 };

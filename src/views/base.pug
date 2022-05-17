@@ -5,28 +5,25 @@ html(lang="ko")
         meta(http-equiv='X-UA-Compatible' content='IE=edge')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         title Meal With Me
-        style 
-            include ./styles/base.css
+        link(rel="stylesheet" href="./styles/base.css")
 
     body 
-        div.container
+        div.lefeSideBox
             a(href="/")
                 img.logo(src='images/logo.png' alt='logo')
-            div.user
-                label.unick(for='unick')
-                br
-                | usernickname
-                br
-                label.uid(for='uid')
-                | userid
-                br
-                label.ucampus(for='ucampus')
-                br
-                | usercampus
-                br
-                label.ulevel(for='ulevel')
-                | userlevel
-                br
-                button.information(type='button') 내정보
+            div.userBox
+                label(for='unick')
+                    p usernickname
+                label(for='uid')
+                    p userid
+                label(for='ucampus')
+                    p usercampus
+                label(for='ulevel')
+                    p userlevel
+                button.myProfileBtn(type='button') 내 정보
+        
+        div.mainBox
+            div.topNav
+                p Hi
 
         block content 

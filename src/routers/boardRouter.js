@@ -1,5 +1,5 @@
 import express from "express";
-import {watcthBoard, watchContent, upload} from "../controllers/boardController";
+import {watcthBoard, watchContent, writing} from "../controllers/boardController";
 
 const boardRouter = express.Router();
 
@@ -9,7 +9,7 @@ boardRouter.get("/:board", watcthBoard);
 boardRouter.get("/:board/:no", watchContent);
 // 글을 작성하는 페이지 
 // ++ POST 컨트롤러도 만들어야 함. 
-boardRouter.get("/:board/upload", upload);
+boardRouter.get("/:board/writing", writing);
 
 
 export default boardRouter;
