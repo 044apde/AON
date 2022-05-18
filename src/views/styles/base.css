@@ -1,108 +1,139 @@
-html, body{
-    height: 100%;
-    min-height: 100%;
-    width: 100%;
+body {
+    font-family: "Lato", sans-serif;
     box-sizing: border-box;
+    border-width: 0px;
     margin: 0;
+  }
 
-    font-size: 1.6vh;
-}
+  a {
+    color: black;
+    text-decoration: none; /* no underline */
+  }
 
-.wrap{
-    width: 100%;
+  a:hover{
+    color: rebeccapurple;
+  }
+  
+.sideBar {
     height: 100%;
-    margin: 0 auto;
-
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: center;
-    
-}
-
-.wrap .sideBox {
-    flex-shrink: 0;
-    min-height: 80% + 180px;
-    width: 18%;
-    min-width: 300px;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
     background-color: #707070;
-
+    overflow-x: hidden;
+    padding-top: 20px;
+    text-align: center;
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: center;
-
-    font-size: 15px;
+    justify-content: center;
 }
 
-.wrap .sideBox .logoBox{
-    height: auto;
-    width: 100%;
-    margin-top: 120px;
-
-    text-align: center;
-}   
-
-.wrap .sideBox .logoBox .logo{
-    height: auto;
-    width: 120px;
-
-} 
-
-.wrap .sideBox .profileBox{
-    min-height: 250px;
-    width: 100%;
-
-    text-align: center;
+.sideBar .logo{
+    position: fixed;
+    top: 120px;
+    width: auto;
+    height: 80px;
 }
 
-.wrap .sideBox .profileBox .profileImage{
-    height: auto;
+.sideBar .profileBox{
+    position: fixed;
+    bottom: 40px;
+}
+
+.sideBar .profileBox .profileImage{
     width: 60px;
-
 }
 
-.wrap .sideBox .profileBox .goProfileBtn{
-    height: 25px;
-    width: 70px;
-
-    margin-bottom: 40px;
+.sideBar .profileBox .btn{
+    width: 65px;
 }
 
-.wrap .mainBox {
-    height: 100%;
-    width: 82%;
-    min-width: 450px;
-    background-color: yellow;
 
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: center;
+.sideBar a:hover {
+color: #f1f1f1;
 }
 
-.wrap .mainBox .nav{
-    min-height: 13vh;
-    width: 100%;
-    background-color: blue;
-    
+.main {
+    margin-left: 330px; /* Same as the width of the sidenav */
+    font-size: 15px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    min-width: 800px;
 }
 
-.wrap .mainBox .searchBox{
-    height: 10vh;
-    width: 100%;
-    background-color: green;
+.main .nav {
+    margin-top: 20px;
 }
 
-.wrap .mainBox .contents{
-    min-height: 77vh;
-    width: 100%;
+.main .nav .big a{
+    margin-left: 50px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.main .nav .small{
+    margin-top: 10px;
+    margin-left: 350px;
+}
+
+.main .nav .small a{
+    margin-left: 20px;
+}
+
+.main .searchBar{
+    font-size: 18px;
+    margin-top: 30px;
+    vertical-align: baseline;
+    margin-bottom: 0px;
+}
+
+.main .searchBar p{
+    display: inline;
+    vertical-align: bottom;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.main .searchBar .popularPost{
+    display: inline;
+    margin-left: 15px;
+    width: 200px;
+    vertical-align: bottom;
+}
+
+.main .searchBar img {
+    height: 23px;
+    display: inline;
+    vertical-align: bottom;
+}
+
+.main .searchBar .searchBox{
+    display: inline;
+    margin-left: 100px;
+}
+
+.main .searchBar .searchBox input:nth-child(1) {
+    width: 450px;
+    height: 23px;
+    background-image: url('/images/icon_search.png');
+    background-repeat: no-repeat;
+    background-size: 19px;
+    background-position: 10px;
+    padding-left: 40px;
+    border-radius: 10px;
+}
+
+.main .searchBar .searchBox input:nth-child(1):focus {
+    background-color: #F5EBE9;
+    border-color: black;
+}
+
+.main .searchBar .searchBox input:nth-child(1)::after {
     background-color: red;
-
 }
+
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+};
