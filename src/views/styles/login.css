@@ -1,12 +1,15 @@
- /* Full-width inputs */
-input{
+*{
+  font-size: 15px;
+}
+
+/* Full-width inputs */
+ input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    border-radius: 20px 20px 20px 20px;
 }
 
   /* Set a style for all buttons */
@@ -16,9 +19,9 @@ button {
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    border-radius: 20px 20px 20px 20px;
     cursor: pointer;
     width: 100%;
+    font-weight: bolder;
 }
 
   /* Center the avatar image inside this container */
@@ -26,9 +29,8 @@ button {
     text-align: center;
     margin: 24px 0 12px 0;
     position: absolute;
-    top: 50%;
-    left: 30%;
-    width: 300px;
+    top: 30%;
+    right: 40%;
 }
 
   /* Avatar image */
@@ -46,10 +48,16 @@ img.avatar {
     left: 50%;
 }
 
+
+.container .smallBox {
+  display: flex;
+  justify-content: space-between;
+}
+
 button.register{
-    width : 49%;
+    width : 50%;
 }
 
 button.forgot{
-    width : 49%;
+    width : 50%;
 }

@@ -1,22 +1,20 @@
 doctype html
 head
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  style
-    include ./styles/login.css
-  title Meal With Me
-
-  body
-    img.imgcontainer(src="images/logo.png" alt = `imge`)
-    form(action='action_page.php' method='post')
-      .container
-        label(for='uname')
-          b ID
-        input(type='text' placeholder='아이디를 입력하세요' name='uname' required='')
-        label(for='psw')
-          b Password
-        input(type='password' placeholder='비밀번호를 입력하세요' name='psw' required='')
-        button(type='submit') Login
-        button.register(type='button' onclick = "location.href = '/join' ") 회원가입
-        button.forgot(type='button') 아이디/비밀번호 찾기
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Meal With Me
+    link(rel="stylesheet" href="./styles/login.css")
+body
+    form(method = "POST")
+        .imgcontainer
+           img.avatar(src="images/logo.png" alt = `logo`)
+        .container
+            input(type='text', placeholder='아이디를 입력하세요', name='id', required='')
+            input(type='password', placeholder='비밀번호를 입력하세요', name='pwd', required='')
+            button(type='submit') Login
+            .smallBox
+                label
+                    input.checkBox(type='checkbox', id='check', name='check') 
+                    |   로그인 상태 유지
+                a 아이디/비밀번호 찾기
