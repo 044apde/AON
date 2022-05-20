@@ -3,7 +3,7 @@ body {
     box-sizing: border-box;
     border-width: 0px;
     margin: 0;
-    background-color: #F5F5F5;
+    background-color: #fff;
   }
 
   a {
@@ -22,7 +22,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #FFFFFF;
+    background-color: #E4E4E4;
     overflow-x: hidden;
     padding-top: 20px;
     text-align: center;
