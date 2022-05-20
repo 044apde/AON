@@ -1,5 +1,6 @@
 *{
   font-size: 15px;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 /* Full-width inputs */
@@ -24,28 +25,41 @@ button {
     font-weight: bolder;
 }
 
+.wrap{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+  position:absolute;
+  top:45%; left:50%;
+  transform: translate(-50%, -50%);
+}
+
   /* Center the avatar image inside this container */
 .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
-    position: absolute;
-    top: 30%;
-    right: 40%;
+    margin-right: 100px;
+}
+
+.imgcontainer p{
+  position: relative;
+  top: -47px;
+  font-family: 'Nanum Myeongjo', serif;
 }
 
   /* Avatar image */
 img.avatar {
-    width: 40%;
-    border-radius: 50%;
+    height: 230px;
+    padding-top: 40px;
 }
 
   /* Add padding to containers */
 .container {
     padding: 16px;
-    width: 35%;
-    position: absolute;
-    top: 30%;
-    left: 50%;
+    width: 450px;
 }
 
 

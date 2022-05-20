@@ -5,10 +5,12 @@ head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title Meal With Me
     link(rel="stylesheet" href="./styles/login.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
 body
-    form(method = "POST")
-        .imgcontainer
-           img.avatar(src="images/logo.png" alt = `logo`)
+    form(method = "POST").wrap
+        .imgcontainer   
+            img.avatar(src="images/logo.png" alt = `logo`)
+            p "한양대학교 에리카 커뮤니티"
         .container
             input(type='text', placeholder='아이디를 입력하세요', name='id', required='')
             input(type='password', placeholder='비밀번호를 입력하세요', name='pwd', required='')
