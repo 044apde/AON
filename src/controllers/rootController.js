@@ -1,12 +1,30 @@
 import Post from "../models/Post";
 import User from "../models/User";
+import bcrypt from "bcrypt";
 
 export const home = async (req, res) => {
     return res.render("home", { pageTitle: "Home" });
 };
 
-export const login = (req, res) => {
+export const getLogin = (req, res) => {
     return res.render("login", { pageTitle: "Login" });
+};
+
+export const postLogin = async (req, res) => {
+    const { id, pwd } = req.body;
+    const user = await User.findOne({id}); 
+    if (!user) {
+        return res.status(400).render("login", { 
+            errorMessage: "아이디 혹은 비밀번호가 맞지 않습니다." 
+        });
+    }
+    const checkPwd = await bcrypt.compare(pwd, user.pwd);
+    if (!checkPwd) {
+        return res.status(400).render("login", {
+            errorMessage: "아이디와 비밀번호가 맞지 않습니다."
+        })
+    }
+    return res.end();
 };
 
 export const getJoin = (req, res) => {
