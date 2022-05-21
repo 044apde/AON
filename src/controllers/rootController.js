@@ -2,50 +2,44 @@ import Post from "../models/Post";
 import User from "../models/User";
 
 export const home = async (req, res) => {
-    return res.render("home", {pageTitle: "Home"});
+    return res.render("home", { pageTitle: "Home" });
 };
 
 export const login = (req, res) => {
-    return res.render("login", {pageTitle: "Login"});
+    return res.render("login", { pageTitle: "Login" });
 };
 
 export const getJoin = (req, res) => {
-    return res.render("join", {pageTitle: "Join"});
+    return res.render("join", { pageTitle: "Join" });
 };
 
 export const postJoin = async (req, res) => {
-    console.log(req.body);
-    const {id, pwd1, pwd2, username, yy, mm, dd, gender} = req.body;
-    if(pwd1 !== pwd2) {
-        console.log("check password.");
+    const { id, pwd, pwd2, username, yy, mm, dd, gender } = req.body;
+    if (pwd !== pwd2) {
         return res.status(400).render("join", {
-            errorMessage: "비밀번호가 서로 맞지 않습니다."
+            errorMessage: "비밀번호가 서로 맞지 않습니다.",
         });
     }
-    const exists = await User.exists({$or: [{username}]});
-    console.log(exists);
-    if(exists) {
-        console.log("username is already taken.");
+    const exists = await User.exists({ $or: [{ id }] });
+    if (exists) {
         return res.status(400).render("join", {
-            errorMessage: "이미 사용중인 아이디입니다."
+            errorMessage: "이미 존재하는 아이디입니다.",
         });
     }
-    try{
+    try {
         await User.create({
             id,
-            pwd1,
+            pwd,
             username,
             yy,
             mm,
             dd,
-            gender
+            gender,
         });
-        console.log("created");
-        return res.redirect("/login");
+        return res.status(200).redirect("/login");
     } catch {
-        console.log("3");
         return res.status(400).render("join", {
-            errorMessage: "error",
+            errorMessage: "무언가 잘못되었습니다.",
         });
     }
 };

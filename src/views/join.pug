@@ -17,30 +17,30 @@ html(lang="ko")
                     h3  
                         label(for="id") 아이디
                         span &nbsp;
-                    input(name="id", type="text", id="id", maxlength="18", required)
+                    input(name="id" type="text" id="id" maxlength="18", required)
                 div
                     h3  
-                        label(for="pwd1") 비밀번호
-                        span.checkPwd1 &nbsp;
-                    input.pwd1(name="pwd1", type="password", id="pwd1", minlength="6", maxlength="16", required)
+                        label(for="pwd") 비밀번호
+                        span.checkpwd &nbsp;
+                    input.pwd(name="pwd" type="password" id="pwd" minlength="6" maxlength="16", required)
                 div
                     h3  
                         label(for="pwd2") 비밀번호 재확인
                         span.checkPwd2
-                    input.pwd2(name="pwd2", type="password", id="pwd2", minlength="6", maxlength="16", onchange="check_pw()", required)
+                    input.pwd2(name="pwd2" type="password" id="pwd2" minlength="6" maxlength="16" onchange="check_pw()", required)
                 div 
                     h3  
                         label(for="name") 이름
-                    input(name="username", type="text", id="username", style="ime-mode:auto;", required)
+                    input(name="username" type="text" id="username" style="ime-mode:auto;", required)
                 div
                     h3  
                         label(for="yy") 생년월일
 
                     div.dateBox
                         div.bir_yy
-                            input(name="yy", type="text", id="yy", placeholder="년(4자)", size=4, minlength="4", maxlength="4", required)
+                            input(name="yy" type="text" id="yy" placeholder="년(4자)", size=4, minlength="4" maxlength="4", required)
                         div.bir_mm
-                            select(name="mm", id="mm", required)
+                            select(name="mm" id="mm", required)
                                 option 월
                                 option(value="01") 1
                                 option(value="02") 2
@@ -55,29 +55,29 @@ html(lang="ko")
                                 option(value="11") 11
                                 option(value="12") 12
                         div.bir_dd
-                            input(name="dd", type="text", id="dd", placeholder="일", minlength="1", maxlength="2", required)
+                            input(name="dd" type="text" id="dd" placeholder="일" minlength="1" maxlength="2", required)
                 div
                     h3  
                         label(for="gender") 성별
-                    select(name="gender", id="gender", required).genderSelect
+                    select(name="gender" id="gender", required).genderSelect
                         option 성별
                         option(value="male") 남자
                         option(value="female") 여자
                         option(value="none") 선택안함
-                        
+
                 div
-                    button.joinBtn(type="submit", value="회원가입 하기") 가입하기
+                    button.joinBtn(type="submit" value="회원가입 하기") 가입하기
             div.errorBox
                 if errorMessage
                     p #{errorMessage}
-                
-    
+
+
     script(type='application/javascript').
         document.querySelector(".pwd2").addEventListener("change", (e) => {
-            const pwd1 = document.querySelector(".pwd1").value;
+            const pwd = document.querySelector(".pwd").value;
             const pwd2 = document.querySelector(".pwd2").value;
             const checkPwd2 = document.querySelector(".checkPwd2");
-            if(pwd1 !== pwd2){
+            if(pwd !== pwd2){
                 checkPwd2.textContent = " " + `비밀번호가 일치하지 않습니다.`;
                 checkPwd2.style.color = "red";
             }else if(pwd2.length = 0){
@@ -88,24 +88,24 @@ html(lang="ko")
                 checkPwd2.style.color = "red";
             }else{
                 checkPwd2.textContent = " " + `비밀번호가 일치합니다.`;
-                checkPwd2.style.color = "blue";
+                checkPwd2.style.color = "green";
             }
         });
 
     script(type='application/javascript').
-        document.querySelector(".pwd1").addEventListener("change", (e) => {
-            const pwd1 = document.querySelector(".pwd1").value;
+        document.querySelector(".pwd").addEventListener("change", (e) => {
+            const pwd = document.querySelector(".pwd").value;
             const pwd2 = document.querySelector(".pwd2").value;
-            const checkPwd1 = document.querySelector(".checkPwd1");
-            if(pwd1.length = 0){
-                checkPwd1.textContent = " " + `비밀번호를 입력해주세요.`;
-                checkPwd1.style.color = "red";
-            }else if(pwd1.length < 6){
-                checkPwd1.textContent = " " + `비밀번호가 6자 미만입니다.`;
-                checkPwd1.style.color = "red";
+            const checkpwd = document.querySelector(".checkpwd");
+            if(pwd.length = 0){
+                checkpwd.textContent = " " + `비밀번호를 입력해주세요.`;
+                checkpwd.style.color = "red";
+            }else if(pwd.length < 6){
+                checkpwd.textContent = " " + `비밀번호가 6자 미만입니다.`;
+                checkpwd.style.color = "red";
             }else{
-                checkPwd1.textContent = " " + `적절합니다.`;
-                checkPwd1.style.color = "green";
+                checkpwd.textContent = " " + `적절합니다.`;
+                checkpwd.style.color = "green";
             }
         });
 
