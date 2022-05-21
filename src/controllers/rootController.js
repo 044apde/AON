@@ -3,11 +3,17 @@ import User from "../models/User";
 import bcrypt from "bcrypt";
 
 export const home = async (req, res) => {
+    if (res.locals.loggedIn !== true) {
+        return res.redirect("/login");
+    }
     return res.render("home", { pageTitle: "Home" });
 };
 
 export const getLogin = (req, res) => {
-    return res.render("login", { pageTitle: "Login" });
+    if (res.locals.loggedIn !== true) {
+        return res.render("login");
+    }
+    return res.redirect("/");
 };
 
 export const postLogin = async (req, res) => {
@@ -24,7 +30,9 @@ export const postLogin = async (req, res) => {
             errorMessage: "아이디와 비밀번호가 맞지 않습니다."
         })
     }
-    return res.end();
+    req.session.loggedIn = true;
+    req.session.user = user;
+    return res.redirect("/");
 };
 
 export const getJoin = (req, res) => {
