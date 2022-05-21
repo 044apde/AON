@@ -13,11 +13,14 @@ export const postJoin = async (req, res) => {
       errorMessage: "비빌번호가 서로 맞지 않습니다.",
     });
   }
+  if (password) {
+    
+  }
   const exists = await User.exists({ $or: [{ username }, { email }] });
   if (exists) {
     return res.status(400).render("join", {
       pageTitle,
-      errorMessage: "This email/username is already taken.",
+      errorMessage: "이미 사용중인",
     });
   }
   try {

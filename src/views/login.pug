@@ -1,11 +1,13 @@
 doctype html
+html(lang="ko")
 head
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Meal With Me
     link(rel="stylesheet" href="./styles/login.css")
     link(rel="preconnect" href="https://fonts.googleapis.com")
+    script(type='text/javascript' src='js/login.js')
+    title Meal With Me
 body
     form(method = "POST").wrap
         .imgcontainer   
@@ -19,4 +21,7 @@ body
                 label
                     input.checkBox(type='checkbox', id='check', name='check') 
                     |   로그인 상태 유지
-                a 아이디/비밀번호 찾기
+                a(href="#") 아이디/비밀번호 찾기
+            .joinBox
+                span 혹시 한양인이신가요? &nbsp;
+                a(href="/join").joinlink 회원가입하기
