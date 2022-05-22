@@ -17,6 +17,7 @@
   "homepage": "https://github.com/044apde/AON#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.6.0",
     "express": "^4.17.3",
     "express-session": "^1.17.3",
     "mongoose": "^6.2.8",
