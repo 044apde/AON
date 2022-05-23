@@ -1,59 +1,48 @@
-.img.selfie{
-    margin-bottom: 29px;
-    border-radius: 30px;
-    width: 50px;
+:root {
+    --post-size: 95%;
 }
 
-.label.unick{
-    font-size: 18pt;
-    font-weight: bold;
-}
-.label.uid{
-    font-size: 18pt
+.content {
+    width: 990px;
+    height: 750px;
+    margin-top: 20px;
 }
 
-.button.information{
-    margin-top: 29px;
-    margin-bottom: 74px;
-    font-size: 14px;
-    background-color: white;
-    color: #242424;
-    border-style: solid;
-    width: 103px;
-    height: 32px;
-}
-/* 네비게이션 바 정리 */
-.navbar{
-    position: fixed;
-    left: 330px;
-    display: block;
-    color: #242424;
-    font-weight: bold;
-    font-size: 24pt;
-    padding: 7px 8px;
-}
-
-.nav ul{
+.content .boardBox {
+    margin-top: 10px;
+    width: 990px;
+    height: 250px;
     display: flex;
-    list-style-type: none;
+    justify-content: space-between;
 }
 
-.menu li{
-    display: inline;
-    font-weight: bolder;
-    float: left;
-    padding: 0 15px;
+.boxes {
+    width: 485px;
+    height: 250px;
+    border: 1px solid green;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
 }
 
-.downmenu ul{
-    display: block;
-    margin-left: 200px;
+.linkToBoard {
+    width: var(--post-size);
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #D0D0D0;
+    height: fit-content;
 }
 
-.downmenu li{
-    display: inline;
-    float: left;
-    font-size: 14pt;
-    font-weight: lighter;
-    padding: 0 8px;
+.linkToBoard a {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.postList {
+    width: var(--post-size);
+    height: 198px;
+    margin-bottom: 5px;
 }

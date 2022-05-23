@@ -3,21 +3,24 @@ html(lang="ko")
     head  
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        link(rel="stylesheet" href="./styles/base.css")
+        link(rel="stylesheet" href="/styles/base.css")
 
     body      
-        .sideBar   
-            img.logo(src="images/logo.png" alt = `logo`)
+        .sideBar
+            div
+                a(href="/")
+                    img.logo(src="images/logo.png")
             .profileBox
                 img.profileImage(src="images/profile_icon.png" alt = "profile_icon")
                 .userName #{loggedInUser.username}
-                .userID #{loggedInUser.id}
+                .userID (#{loggedInUser.id})
                 .campus 한양대학교 에리카 캠퍼스
-                button.btn(type='button' onclick = "location.href = '/proflie'") 내 정보
+                .grade 일반회원
+                button.proflieBtn(type='button' onclick = "location.href = '/user/proflie'") 내 정보
         .main
             .nav
                 .big
-                    a(href="#") 홈
+                    a(href="/") 홈
                     a(href ="#") 뮴팅
                     a(href="#") 공지
                     a(href="#") 게시판
@@ -33,7 +36,6 @@ html(lang="ko")
                 a(href="#").popularPost 홈페이지 서비스 아이디어 공모전 안내
                 form(method="GET").searchBox
                     input(placeholder="검색어를 입력하세요!" type="text" name="keyword")
-
             //- contents 아래에 code 작성하면 됩니다
             .contents
                 block content

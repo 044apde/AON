@@ -4,17 +4,24 @@ body {
     border-width: 0px;
     margin: 0;
     background-color: #fff;
-  }
+}
 
-  a {
+* {
+    font-size: 13px;
+}
+
+a {
     color: black;
-    text-decoration: none; /* no underline */
-  }
+    text-decoration: none;
+    cursor:pointer;
+    /* no underline */
+}
 
-  a:hover{
-    text-decoration:underline
-  }
-  
+a:hover {
+    text-decoration: underline
+}
+
+
 .sideBar {
     height: 100%;
     width: 300px;
@@ -30,76 +37,115 @@ body {
     justify-content: center;
 }
 
-.sideBar .logo{
-    position: fixed;
-    top: 120px;
+.sideBar .logo {
+    margin-top: 120px;
     width: auto;
     height: 80px;
 }
 
-.sideBar .profileBox{
+.sideBar .profileBox {
     position: fixed;
     bottom: 40px;
+    height: fit-content;
+    width: 230px;
 }
 
-.sideBar .profileBox .profileImage{
+.sideBar .profileBox .profileImage {
     width: 60px;
+    margin-top: 12px;
 }
 
-.sideBar .profileBox .btn{
-    width: 65px;
+.sideBar .profileBox .userName {
+    font-size: 17px;
+    margin-top: 12px;
+    font-weight: bolder;
+}
+
+.sideBar .profileBox .userID {
+    font-size: 15px;
+    color: #4B4B4B;
+}
+
+.sideBar .profileBox .campus {
+    margin-top: 10px;
+    color: #4B4B4B;
+}
+
+.sideBar .profileBox .grade {
+    color: #4B4B4B;
+}
+
+.sideBar .profileBox .proflieBtn {
+    margin-top: 12px;
+    width: 80px;
+    height: 23px;
+    color: #4B4B4B;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.sideBar .proflieBtn:hover {
+    background-color: #E5E5E5;
+    cursor:pointer;
 }
 
 
 .sideBar a:hover {
-color: #f1f1f1;
+    color: #f1f1f1;
+    cursor:pointer;
 }
 
 .main {
-    margin-left: 330px; /* Same as the width of the sidenav */
-    font-size: 15px; /* Increased text to enable scrolling */
+    margin-left: 330px;
+    /* Same as the width of the sidenav */
+    font-size: 15px;
+    /* Increased text to enable scrolling */
     padding: 0px 10px;
+    width: 1200px;
     min-width: 1000px;
+    height: 1220px;
 }
 
 .main .nav {
     margin-top: 20px;
 }
 
-.main .nav .big a{
+.main .nav .big a {
     margin-left: 50px;
     font-size: 28px;
     font-weight: bold;
 }
 
-.main .nav .small{
+.main .nav .small {
     margin-top: 10px;
     margin-left: 350px;
 }
 
-.main .nav .small a{
+.main .nav .small a {
     margin-left: 20px;
+    font-size: 15px;
 }
 
-.main .searchBar{
-    font-size: 18px;
+.main .searchBar {
     margin-top: 30px;
     vertical-align: baseline;
     margin-bottom: 0px;
 }
 
-.main .searchBar p{
+.main .searchBar p {
     display: inline;
     vertical-align: bottom;
     font-weight: bold;
     margin-left: 3px;
+    font-size: 18px;
 }
 
-.main .searchBar .popularPost{
+.main .searchBar .popularPost {
     display: inline;
     margin-left: 15px;
     width: 200px;
     vertical-align: bottom;
+    font-size: 18px;
 }
 
 .main .searchBar img {
@@ -108,7 +154,7 @@ color: #f1f1f1;
     vertical-align: bottom;
 }
 
-.main .searchBar .searchBox{
+.main .searchBar .searchBox {
     display: inline;
     margin-left: 100px;
 }
@@ -135,6 +181,13 @@ color: #f1f1f1;
 
 
 @media screen and (max-height: 450px) {
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
-};
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+;

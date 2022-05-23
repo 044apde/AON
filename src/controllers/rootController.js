@@ -3,25 +3,19 @@ import User from "../models/User";
 import bcrypt from "bcrypt";
 
 export const home = async (req, res) => {
-    if (res.locals.loggedIn !== true) {
-        return res.redirect("/login");
-    }
     return res.render("home", { pageTitle: "Home" });
 };
 
 export const getLogin = (req, res) => {
-    if (res.locals.loggedIn !== true) {
-        return res.render("login");
-    }
-    return res.redirect("/");
+    return res.render("login");
 };
 
 export const postLogin = async (req, res) => {
     const { id, pwd } = req.body;
-    const user = await User.findOne({id}); 
+    const user = await User.findOne({ id });
     if (!user) {
-        return res.status(400).render("login", { 
-            errorMessage: "아이디 혹은 비밀번호가 맞지 않습니다." 
+        return res.status(400).render("login", {
+            errorMessage: "아이디 혹은 비밀번호가 맞지 않습니다."
         });
     }
     const checkPwd = await bcrypt.compare(pwd, user.pwd);
@@ -68,4 +62,9 @@ export const postJoin = async (req, res) => {
             errorMessage: "무언가 잘못되었습니다.",
         });
     }
+};
+
+export const logout = async (req, res) => {
+    req.session.destroy();
+    return res.redirect("/login");
 };

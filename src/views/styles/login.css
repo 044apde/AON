@@ -97,3 +97,7 @@ button.forgot{
   font-weight: bold;
   color: black;
 }
+
+.checkBox{
+  accent-color: black;
+}
