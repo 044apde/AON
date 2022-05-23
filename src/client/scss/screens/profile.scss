@@ -17,11 +17,11 @@
     width: 990px;
     margin-bottom: 30px;
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
 }
 
 .content button {
@@ -35,7 +35,7 @@
 
 .content button:hover {
     background-color: #E5E5E5;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .content .profileBox {
@@ -45,14 +45,17 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    border: 1px solid black
+    border: 2px solid black
 }
 
 .content .imgBox {
     height: 150px;
     width: auto;
-    border: 1px solid  red;
     margin-top: 70px;
+}
+
+.imgBox .logo {
+    width: 120px;
 }
 
 .content .username {
@@ -78,22 +81,21 @@
     margin-top: 40px;
 }
 
-.withdrawalBox{
+.withdrawalBox {
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
-.editBox{
+.editBox {
     width: 50%;
     height: 650px;
     display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: baseline;
-	align-content: flex-start;
-    border-left: 1.5px solid black;
-    
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    border-left: 2px solid black;
     padding-left: 30px;
 }
 
@@ -104,7 +106,7 @@
     padding-bottom: 20px;
 }
 
-.editBox span{
+.editBox span {
     font-size: 27px;
     font-weight: bold;
 }
@@ -117,7 +119,7 @@
     font-weight: inherit;
 }
 
-.editBox a:hover{
+.editBox a:hover {
     text-decoration: none;
     font-weight: 500;
 }

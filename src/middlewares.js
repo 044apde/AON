@@ -7,10 +7,13 @@ export const localsMiddleware = (req, res, next) => {
 };
 
 export const protectorMiddleware = (req, res, next) => {
-    if(req.session.loggedIn == true){
+    if (req.session.loggedIn == true) {
         return next();
     } else {
-        if(req.originalUrl !== "/login"){
+        if (req.originalUrl !== "/login") {
+            if (req.originalUrl == "/join") {
+                return next();
+            }
             return res.redirect("/login");
         } else {
             return next();
@@ -19,7 +22,7 @@ export const protectorMiddleware = (req, res, next) => {
 };
 
 export const publicOnlyMiddleware = (req, res, next) => {
-    if(!req.session.loggedIn) {
+    if (!req.session.loggedIn) {
         return next();
     } else {
         return res.redirect("/");

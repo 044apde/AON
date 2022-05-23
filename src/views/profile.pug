@@ -2,14 +2,14 @@ extends base.pug
 block content 
     head 
         title MWM: profile
-        link(rel="stylesheet" href="/styles/proflie.css")
+        link(rel="stylesheet" href="/static/css/profile.css")
 
     .title
         p 내 정보
     .content
         .profileBox
             .imgBox
-                img.logo(src="images/logo.png" alt = "avatar")
+                img.logo(src="/static/images/profile_icon.png" alt = "avatar")
             .username  #{loggedInUser.username}
             .userID (#{loggedInUser.id})
             .campus 한양대학교 에리카 캠퍼스

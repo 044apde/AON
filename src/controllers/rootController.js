@@ -2,7 +2,7 @@ import Post from "../models/Post";
 import User from "../models/User";
 import bcrypt from "bcrypt";
 
-export const home = async (req, res) => {
+export const home = async(req, res) => {
     return res.render("home", { pageTitle: "Home" });
 };
 
@@ -10,7 +10,7 @@ export const getLogin = (req, res) => {
     return res.render("login");
 };
 
-export const postLogin = async (req, res) => {
+export const postLogin = async(req, res) => {
     const { id, pwd } = req.body;
     const user = await User.findOne({ id });
     if (!user) {
@@ -33,7 +33,7 @@ export const getJoin = (req, res) => {
     return res.render("join", { pageTitle: "Join" });
 };
 
-export const postJoin = async (req, res) => {
+export const postJoin = async(req, res) => {
     const { id, pwd, pwd2, username, yy, mm, dd, gender } = req.body;
     if (pwd !== pwd2) {
         return res.status(400).render("join", {
@@ -64,7 +64,7 @@ export const postJoin = async (req, res) => {
     }
 };
 
-export const logout = async (req, res) => {
+export const logout = async(req, res) => {
     req.session.destroy();
     return res.redirect("/login");
 };
