@@ -1,8 +1,8 @@
 import Post from "../models/Post";
 
 export const moveToSpecificBoard = (req, res) => {
-    console.log(req.params);
-    return res.render("board");
+    const boardName = req.params.boardName + " 게시판";
+    return res.render("board", { boardName });
 };
 export const getPost = (req, res) => {
     return res.render("board");

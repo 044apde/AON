@@ -7,7 +7,8 @@ body {
 }
 
 * {
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: lighter;
 }
 
 a {
@@ -101,65 +102,80 @@ a:hover {
     padding: 0px 10px;
     width: 1200px;
     min-width: 1000px;
-    height: 1220px;
+    height: 700px;
 }
 
 .main .nav {
     margin-top: 20px;
+    width: 990px;
 }
 
-.main .nav .big a {
-    margin-left: 50px;
-    font-size: 28px;
+.main .big .E:nth-child(1) {
+    padding-left: 5px;
+    font-size: 24px;
     font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
-.main .nav .small {
-    margin-top: 10px;
-    margin-left: 350px;
-}
-
-.main .nav .small a {
-    margin-left: 20px;
-    font-size: 15px;
+.main .big .E:nth-child(2) {
+    margin-left: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .main .searchBar {
     margin-top: 30px;
     vertical-align: baseline;
     margin-bottom: 0px;
+    width: 990px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: stretch;
+}
+
+.main .searchBar div {
+    display: inline;
+    padding-bottom: 0px;
 }
 
 .main .searchBar p {
     display: inline;
     vertical-align: bottom;
-    font-weight: bold;
+    font-weight: 500;
     margin-left: 3px;
-    font-size: 18px;
+    font-size: 17px;
+    vertical-align: baseline;
 }
 
 .main .searchBar .popularPost {
     display: inline;
     margin-left: 15px;
-    width: 200px;
+    width: 180px;
     vertical-align: bottom;
-    font-size: 18px;
+    font-size: 17px;
+    vertical-align: baseline;
+    font-weight: lighter;
 }
 
 .main .searchBar img {
-    height: 23px;
+    height: 26px;
     display: inline;
     vertical-align: bottom;
 }
 
 .main .searchBar .searchBox {
     display: inline;
-    margin-left: 100px;
 }
 
 .main .searchBar .searchBox input:nth-child(1) {
-    width: 450px;
-    height: 23px;
+    width: 380px;
+    height: 30px;
     background-image: url('/images/icon_search.png');
     background-repeat: no-repeat;
     background-size: 19px;
@@ -168,22 +184,54 @@ a:hover {
     border-radius: 10px;
 }
 
-.main .searchBar .searchBox input:nth-child(1):focus {
-    background-color: #F5EBE9;
-    border-color: black;
+
+/*  */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
 }
 
-.main .searchBar .searchBox input:nth-child(1)::after {
-    background-color: red;
+.dropbtn {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0%;
+    top: 0%;
+    /*다른 요소들보다 앞에 배치*/
+    font-weight: 400;
+    background-color: #E4E4E4;
+    width: 120px;
+    text-align: left;
+    align-content: center;
+    height: fit-content;
+    padding-top: 5px;
+    border-radius: 5%;
 }
 
-;
+.dropdown-content a {
+    border-radius: 5%;
+    width: 95%;
+    padding-bottom: 5px;
+    padding-left: 6px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.dropdown-content a:hover {
+    font-weight: bolder;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

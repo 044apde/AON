@@ -1,5 +1,15 @@
 extends base.pug
 block content 
     head 
-        title=`MWM: ${boardName}board`
         link(rel="stylesheet" href="/css/board.css")
+        title=boardName
+
+    .wrap
+        p.boardTitle #{boardName}
+        table.boardTable
+            tr 
+                th 제목
+                th 글쓴이 
+                th 조회수
+
+    include partials/footer
