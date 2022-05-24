@@ -1,19 +1,22 @@
-*{
-  font-size: 15px;
-  font-family: 'Gothic A1', sans-serif;
+* {
+    font-size: 15px;
+    font-family: 'Gothic A1', sans-serif;
 }
 
 a {
-  color: #979797;
-  text-decoration: none;
+    color: #979797;
+    text-decoration: none;
 }
 
-a:hover{
-  text-decoration:underline;
+a:hover {
+    text-decoration: underline;
 }
+
 
 /* Full-width inputs */
- input[type=text], input[type=password] {
+
+input[type=text],
+input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -22,9 +25,11 @@ a:hover{
     box-sizing: border-box;
 }
 
-  /* Set a style for all buttons */
+
+/* Set a style for all buttons */
+
 button {
-    background-color: #707070;
+    background-color: #50586C;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -34,38 +39,44 @@ button {
     font-weight: bolder;
 }
 
-.wrap{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-
-  position:absolute;
-  top:45%; left:50%;
-  transform: translate(-50%, -50%);
+.wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-  /* Center the avatar image inside this container */
+
+/* Center the avatar image inside this container */
+
 .imgcontainer {
     text-align: center;
     margin-right: 100px;
 }
 
-.imgcontainer p{
-  position: relative;
-  top: -47px;
-  font-family: 'Nanum Myeongjo', serif;
+.imgcontainer p {
+    position: relative;
+    top: -47px;
+    font-family: 'Nanum Myeongjo', serif;
 }
 
-  /* Avatar image */
+
+/* Avatar image */
+
 img.avatar {
     height: 240px;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
-  /* Add padding to containers */
+
+/* Add padding to containers */
+
 .container {
     padding: 16px;
     width: 450px;
@@ -73,31 +84,30 @@ img.avatar {
     text-align: center;
 }
 
-
 .container .smallBox {
-  display: flex;
-  justify-content: space-between;
-  color:#979797;
+    display: flex;
+    justify-content: space-between;
+    color: #979797;
 }
 
-button.register{
-    width : 50%;
+button.register {
+    width: 50%;
 }
 
-button.forgot{
-    width : 50%;
+button.forgot {
+    width: 50%;
 }
 
-.joinBox{
-  margin-top: 20px;
-  color:#979797;
+.joinBox {
+    margin-top: 20px;
+    color: #979797;
 }
 
-.joinBox a{ 
-  font-weight: bold;
-  color: black;
+.joinBox a {
+    font-weight: bold;
+    color: #50586C;
 }
 
-.checkBox{
-  accent-color: black;
+.checkBox {
+    accent-color: #50586C;
 }

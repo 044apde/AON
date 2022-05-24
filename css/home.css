@@ -20,7 +20,8 @@
 .boxes {
     width: 485px;
     height: 250px;
-    border: 1px solid green;
+    border: 1.5px solid #50586C;
+    ;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -40,6 +41,7 @@
 .linkToBoard a {
     font-size: 17px;
     font-weight: bold;
+    color: #50586C;
 }
 
 .postList {
