@@ -1,1 +1,73 @@
-extends base.pug
+doctype html
+html(lang="ko")
+    head  
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel="stylesheet" href="/css/join.css")
+        title MWM: Join
+
+    body
+        .wrap
+            .logoBox 
+                a(href="/login")
+                    img.logo(src="images/logo.png")
+            form(method="POST")
+                div
+                    h3  
+                        label(for="id") 아이디
+                        span &nbsp;
+                    input(name="id" type="text" id="id" maxlength="18", required)
+                div
+                    h3  
+                        label(for="pwd1") 비밀번호
+                        span.checkPwd1 &nbsp;
+                    input.pwd1(name="pwd1" type="password" id="pwd1" minlength="6" maxlength="16", required)
+                div
+                    h3  
+                        label(for="pwd2") 비밀번호 재확인
+                        span.checkPwd2
+                    input.pwd2(name="pwd2" type="password" id="pwd2" minlength="6" maxlength="16" onchange="check_pw()", required)
+                div 
+                    h3  
+                        label(for="name") 이름
+                    input(name="username" type="text" id="username" style="ime-mode:auto;", required)
+                div
+                    h3  
+                        label(for="yy") 생년월일
+
+                    div.dateBox
+                        div.bir_yy
+                            input(name="yy" type="text" id="yy" placeholder="년(4자)", size=4, minlength="4" maxlength="4", required)
+                        div.bir_mm
+                            select(name="mm" id="mm", required)
+                                option 월
+                                option(value="01") 1
+                                option(value="02") 2
+                                option(value="03") 3
+                                option(value="04") 4
+                                option(value="05") 5
+                                option(value="06") 6
+                                option(value="07") 7
+                                option(value="08") 8
+                                option(value="09") 9
+                                option(value="10") 10
+                                option(value="11") 11
+                                option(value="12") 12
+                        div.bir_dd
+                            input(name="dd" type="text" id="dd" placeholder="일" minlength="1" maxlength="2", required)
+                div
+                    h3  
+                        label(for="gender") 성별
+                    select(name="gender" id="gender", required).genderSelect
+                        option 성별
+                        option(value="male") 남자
+                        option(value="female") 여자
+                        option(value="none") 선택안함
+
+                div
+                    button.joinBtn(type="submit" value="회원가입 하기") 가입하기
+            div.errorBox
+                if errorMessage
+                    p #{errorMessage}
+    script(src="/js/join.js") 
+        

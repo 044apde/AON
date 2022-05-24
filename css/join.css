@@ -1,0 +1,88 @@
+*{
+    font-size: 15px;
+    font-family: 'Gothic A1', sans-serif;
+    background-color: #F9F9F9;
+    padding: 0 auto;
+    box-sizing: border-box;
+  }
+
+.wrap{
+    width: 500px;
+
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+    margin: 0 auto;
+
+    padding-top: 0px;
+}
+
+.logoBox{
+    width: 130px;
+}
+
+.logo{
+    width: 100%;
+}
+
+input{
+    width:420px;
+    height: 50px;
+    border: 1px solid gray;
+    background-color: white;
+    padding-top: 0;
+    padding-left: 15px;
+}
+
+.dateBox{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: center;
+}
+
+.dateBox div{
+    display: inline;
+}
+
+.dateBox input{
+    width: 130px;
+}
+
+.dateBox select {
+    width: 130px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid gray;
+    padding-left: 15px;
+}
+
+.genderSelect{
+    width: 420px;
+    background-color: white;
+    height: 50px;
+    padding-left: 15px;
+}
+
+.joinBtn{
+    width: 420px;
+    height: 50px;
+    margin-top: 30px;
+    background-color: white;
+    border: 1px solid gray;
+    font-weight: bold;
+}
+
+.joinBtn:hover{
+    text-decoration:underline
+}
+
+.errorBox{
+    color: red;
+}

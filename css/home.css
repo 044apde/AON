@@ -1,0 +1,48 @@
+:root {
+    --post-size: 95%;
+}
+
+.content {
+    width: 990px;
+    height: 750px;
+    margin-top: 20px;
+}
+
+.content .boardBox {
+    margin-top: 10px;
+    width: 990px;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxes {
+    width: 485px;
+    height: 250px;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+.linkToBoard {
+    width: var(--post-size);
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #D0D0D0;
+    height: fit-content;
+}
+
+.linkToBoard a {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.postList {
+    width: var(--post-size);
+    height: 198px;
+    margin-bottom: 5px;
+}

@@ -1,30 +1,43 @@
 {
-  "name": "aon",
-  "version": "1.0.0",
-  "description": "Community for ERICA",
-  "scripts": {
-    "dev": "nodemon --exec babel-node ./src/init.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/044apde/AON.git"
-  },
-  "author": "kkshin044",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/044apde/AON/issues"
-  },
-  "homepage": "https://github.com/044apde/AON#readme",
-  "dependencies": {
-    "express": "^4.17.3",
-    "mongoose": "^6.2.8",
-    "morgan": "^1.10.0",
-    "pug": "^3.0.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.11",
-    "nodemon": "^2.0.15"
-  }
+    "name": "aon",
+    "version": "1.0.0",
+    "description": "Community for ERICA",
+    "scripts": {
+        "dev:server": "nodemon ",
+        "dev:assets": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/044apde/AON.git"
+    },
+    "author": "kkshin044",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/044apde/AON/issues"
+    },
+    "homepage": "https://github.com/044apde/AON#readme",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "connect-mongo": "^4.6.0",
+        "dotenv": "^16.0.1",
+        "express": "^4.17.3",
+        "express-session": "^1.17.3",
+        "mongoose": "^6.2.8",
+        "morgan": "^1.10.0",
+        "pug": "^3.0.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.8",
+        "@babel/node": "^7.16.8",
+        "@babel/preset-env": "^7.16.11",
+        "babel-loader": "^8.2.5",
+        "css-loader": "^6.7.1",
+        "mini-css-extract-plugin": "^2.6.0",
+        "nodemon": "^2.0.15",
+        "sass": "^1.52.1",
+        "sass-loader": "^13.0.0",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2"
+    }
 }

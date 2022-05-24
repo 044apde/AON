@@ -1,0 +1,103 @@
+*{
+  font-size: 15px;
+  font-family: 'Gothic A1', sans-serif;
+}
+
+a {
+  color: #979797;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+/* Full-width inputs */
+ input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+  /* Set a style for all buttons */
+button {
+    background-color: #707070;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bolder;
+}
+
+.wrap{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+  position:absolute;
+  top:45%; left:50%;
+  transform: translate(-50%, -50%);
+}
+
+  /* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin-right: 100px;
+}
+
+.imgcontainer p{
+  position: relative;
+  top: -47px;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+  /* Avatar image */
+img.avatar {
+    height: 240px;
+    padding-top: 40px;
+}
+
+  /* Add padding to containers */
+.container {
+    padding: 16px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+}
+
+
+.container .smallBox {
+  display: flex;
+  justify-content: space-between;
+  color:#979797;
+}
+
+button.register{
+    width : 50%;
+}
+
+button.forgot{
+    width : 50%;
+}
+
+.joinBox{
+  margin-top: 20px;
+  color:#979797;
+}
+
+.joinBox a{ 
+  font-weight: bold;
+  color: black;
+}
+
+.checkBox{
+  accent-color: black;
+}

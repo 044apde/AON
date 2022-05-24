@@ -1,0 +1,39 @@
+extends base.pug
+block content 
+    head 
+        title MWM: profile
+        link(rel="stylesheet" href="/css/profile.css")
+
+    .title
+        p 내 정보
+    .content
+        .profileBox
+            .imgBox
+                img.logo(src="/images/profile_icon.png" alt = "avatar")
+            .username  #{loggedInUser.username}
+            .userID (#{loggedInUser.id})
+            .campus 한양대학교 에리카 캠퍼스
+            .grade #{loggedInUser.grade}
+            .logoutBox 
+                a(href="/logout")
+                    button.logoutBtn(type="button") 로그아웃 
+            .withdrawalBox 
+                a(href="#")
+                    button.logoutBtn(type="button") 회원탈퇴  
+        .editBox
+            .wrap 
+                span 프로필 수정
+                a(href="#") 본인 인증 및 회원 등급
+                a(href="#") 비밀번호 변경
+                a(href="#") 프로필 사진 수정 
+            .wrap 
+                span 게시판 및 뮴팅 
+                a(href="#") 내가 쓴 글 
+                a(href="#") 내가 쓴 댓글 
+                a(href="#") 경고 및 징계 내역
+            .wrap
+                span 기타
+                a(href="#") MWM 게시판 이용수칙
+                a(href="#") 뮴팅 이용수칙
+                a(href="#") 서비스 이용약관
+                a(href="#") 개인정보 처리 방침 

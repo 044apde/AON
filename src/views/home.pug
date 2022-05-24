@@ -1,188 +1,59 @@
-doctype html
-head
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  style  
-    include ./css/home.css
-  title Meal With Me
-  
-// 왼쪽 바
-.container
-  .imgcontainer
-    img.logo(src='logo.png' alt='logo')
-  .user
-    img.selfie(scr='./download.jpeg' alt='selfie')
-    label.unick(for='unick')
-      br
-      | usernickname
-      br
-    label.uid(for='uid')
-      | userid
-      br
-    label.ucampus(for='ucampus')
-      br
-      | usercampus
-      br
-    label.ulevel(for='ulevel')
-      | userlevel
-      br
-    button.information(type='button') 내정보
+extends base.pug
+block content 
+    head 
+        title MWM: Home
+        link(rel="stylesheet" href="/css/home.css")
 
-// 네비게이션 바
-.navbar
-  nav
-    ul.menu
-      li
-        a(href='#') 홈
-      li
-        a(href='#') 뮴팅
-      li
-        a(href='#') 게시판
-    ul.downmenu
-      li
-        a(href='#') 자유
-      li
-        a(href='#') 취창업  
-      li
-        a(href='#') 홍보
-      li
-        a(href='#') 정보
-      li
-        a(href='#') 장터 
-
-.content
-  // 실시간 인기글
-  .hotarticle
-    h3
-      img.fire(src='fire.png' alt='fire')
-      a 실시간 인기글 
-      a.article(href='#')
-
-  // 검색바
-  .search
-    form
-      input.text(type='textg' name='keyword' placeholder='찾고 싶은 글을 검색하세요!')
-  
-  // 게시판들
-  .main.articles
-    .card
-      h3
-        a(href='#') 뮴팅
-      a(href='#')
-        p 밥 한 끼 먹는 가벼운 소개팅 어때요?
-    .card
-      h3
-        a(href='#') 자유게시판
-      a.list(href='#')
-        time 시간
-        p 제목1
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목2
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목3
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목4
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목4
-        hr
-    .card
-      h3
-        a(href='#') 취창업게시판
-      a.list(href='#')
-        time 시간
-        p 제목1
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목2
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목3
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목4
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목5 
-        hr
-    .card
-      h3
-        a(href='#') 정보게시판
-      a.list(href='#')
-        time 시간
-        p 제목1
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목2
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목3
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목4
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목5
-        hr
-    .card
-      h3
-        a(href='#') 홍보게시판
-      a.list(href='#')
-        time 시간
-        p 제목1
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목2
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목3
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목4
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목5
-        hr
-    .card
-      h3
-        a(href='#') 장터게시판
-      a.list(href='#')
-        time 시간
-        p 제목1
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목2
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목3
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목4
-        hr
-      a.list(href='#')
-        time 시간
-        p 제목5
-        hr
+    .content
+        .boardBox
+            .boxes
+                .linkToBoard 
+                    a(href="") 자유 게시판
+                .postList
+                    table
+                        tbody(id="list")
+            .boxes
+                .linkToBoard 
+                    a(href="") 동아리 게시판
+                .postList
+                    table
+                        tbody(id="list")
+        .boardBox
+            .boxes
+                .linkToBoard 
+                    a(href="") 장터 게시판
+                .postList
+                    table
+                        tbody(id="list")
+            .boxes
+                .linkToBoard 
+                    a(href="") 홍보 게시판
+                .postList
+                    table
+                        tbody(id="list")
+        .boardBox
+            .boxes
+                .linkToBoard 
+                    a(href="") 맛집 게시판
+                .postList
+                    table
+                        tbody(id="list")
+            .boxes
+                .linkToBoard 
+                    a(href="") 취업 게시판
+                .postList
+                    table
+                        tbody(id="list")
+        .boardBox
+            .boxes
+                .linkToBoard 
+                    a(href="") 학과 게시판
+                .postList
+                    table
+                        tbody(id="list")
+            .boxes
+                .linkToBoard 
+                    a(href="") 동아리 게시판
+                .postList
+                    table
+                        tbody(id="list")
