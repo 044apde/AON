@@ -9,6 +9,7 @@ body {
 * {
     font-size: 15px;
     font-weight: lighter;
+    color: #50586C;
 }
 
 a {
@@ -29,7 +30,7 @@ a:hover {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #E4E4E4;
+    background-color: #50586C;
     overflow-x: hidden;
     padding-top: 20px;
     text-align: center;
@@ -51,7 +52,7 @@ a:hover {
 }
 
 .sideBar .profileBox .profileImage {
-    width: 60px;
+    width: 80px;
     margin-top: 12px;
 }
 
@@ -59,27 +60,29 @@ a:hover {
     font-size: 17px;
     margin-top: 12px;
     font-weight: bolder;
+    color: #DCE2F0;
 }
 
 .sideBar .profileBox .userID {
     font-size: 15px;
-    color: #4B4B4B;
+    color: #DCE2F0;
 }
 
 .sideBar .profileBox .campus {
     margin-top: 10px;
-    color: #4B4B4B;
+    color: #DCE2F0;
 }
 
 .sideBar .profileBox .grade {
-    color: #4B4B4B;
+    color: #DCE2F0;
 }
 
 .sideBar .profileBox .proflieBtn {
     margin-top: 12px;
     width: 80px;
     height: 23px;
-    color: #4B4B4B;
+    color: #50586C;
+    font-weight: 500;
     background-color: white;
     border: 1px solid gray;
 }
@@ -100,7 +103,7 @@ a:hover {
     font-size: 15px;
     /* Increased text to enable scrolling */
     padding: 0px 10px;
-    width: 1200px;
+    width: 900px;
     min-width: 1000px;
     height: 700px;
 }
@@ -116,6 +119,7 @@ a:hover {
     font-weight: bold;
     text-decoration: underline;
     text-underline-position: under;
+    color: #50586C;
 }
 
 .main .big .E:nth-child(2) {
@@ -124,6 +128,7 @@ a:hover {
     font-weight: bold;
     text-decoration: underline;
     text-underline-position: under;
+    color: #50586C;
 }
 
 .main .searchBar {
@@ -151,6 +156,7 @@ a:hover {
     margin-left: 3px;
     font-size: 17px;
     vertical-align: baseline;
+    color: #50586C;
 }
 
 .main .searchBar .popularPost {
@@ -182,6 +188,7 @@ a:hover {
     background-position: 10px;
     padding-left: 40px;
     border-radius: 10px;
+    border: 1.5px solid #50586C;
 }
 
 
@@ -198,17 +205,16 @@ a:hover {
     font-weight: bold;
     text-decoration: underline;
     text-underline-position: under;
+    color: #50586C;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     z-index: 1;
-    left: 0%;
-    top: 0%;
     /*다른 요소들보다 앞에 배치*/
     font-weight: 400;
-    background-color: #E4E4E4;
+    background-color: transparent;
     width: 120px;
     text-align: left;
     align-content: center;
@@ -218,14 +224,27 @@ a:hover {
 }
 
 .dropdown-content a {
-    border-radius: 5%;
+    background-color: #50586C;
     width: 95%;
+    padding-top: 4px;
     padding-bottom: 5px;
     padding-left: 6px;
     display: block;
     text-decoration: none;
-    color: black;
     font-size: 15px;
+    color: #DCE2F0;
+}
+
+.dropdown-content a:nth-child(1) {
+    background-color: transparent;
+    border-radius: 5%;
+    width: 95%;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 8px;
 }
 
 .dropdown-content a:hover {

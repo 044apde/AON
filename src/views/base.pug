@@ -11,7 +11,7 @@ html(lang="ko")
                 a(href="/")
                     img.logo(src="/images/logo.png")
             .profileBox
-                img.profileImage(src="/images/profile_icon.png" alt = "profile_icon")
+                img.profileImage(src="/images/icon_profile.png" alt = "profile_icon")
                 .userName #{loggedInUser.username}
                 .userID (#{loggedInUser.id})
                 .campus 한양대학교 에리카 캠퍼스
@@ -25,6 +25,7 @@ html(lang="ko")
                     .dropdown
                         a.dropbtn 게시판
                         .dropdown-content
+                            a(href='#') &nbsp;
                             a(href='/board/자유') 자유 게시판
                             a(href='/board/정보') 정보 게시판
                             a(href='/board/장터') 장터 게시판
@@ -36,7 +37,7 @@ html(lang="ko")
                     a(href="#").popularPost=`"홈페이지 서비스 아이디어 공모전 안내"`
                 div
                     form(method="GET").searchBox
-                        input(placeholder="검색어를 입력하세요!" type="text" name="keyword")
+                        input(placeholder="검색어를 입력하세요" type="text" name="keyword")
             //- contents 아래에 code 작성하면 됩니다
             .contents
                 block content
