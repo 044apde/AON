@@ -1,0 +1,125 @@
+.main {
+    height: fit-content;
+}
+
+.title {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.title p {
+    display: inline;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.content {
+    width: 990px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+.content button {
+    width: 200px;
+    height: 40px;
+    color: black;
+    background-color: white;
+    font-size: 15px;
+    border: 1px solid gray;
+}
+
+.content button:hover {
+    background-color: #E5E5E5;
+    cursor: pointer;
+}
+
+.content .profileBox {
+    width: 35%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid black
+}
+
+.content .imgBox {
+    height: 150px;
+    width: auto;
+    margin-top: 70px;
+}
+
+.imgBox .logo {
+    width: 120px;
+}
+
+.content .username {
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.content .userID {
+    font-size: 20px;
+}
+
+.content .campus {
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.content .grade {
+    font-size: 16px;
+}
+
+.logoutBox {
+    margin-top: 40px;
+}
+
+.withdrawalBox {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.editBox {
+    width: 50%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    border-left: 2px solid black;
+    padding-left: 30px;
+}
+
+.editBox .wrap {
+    width: 50%;
+    text-align: left;
+    font-weight: lighter;
+    padding-bottom: 20px;
+}
+
+.editBox span {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.editBox a {
+    display: block;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: inherit;
+}
+
+.editBox a:hover {
+    text-decoration: none;
+    font-weight: 500;
+}

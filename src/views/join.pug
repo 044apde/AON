@@ -3,15 +3,14 @@ html(lang="ko")
     head  
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        link(rel="stylesheet" href="/static/css/join.css")
-        script(type='text/javascript' src='js/join.js')
+        link(rel="stylesheet" href="/css/join.css")
         title MWM: Join
 
     body
         .wrap
             .logoBox 
                 a(href="/login")
-                    img.logo(src="/static/images/logo.png")
+                    img.logo(src="images/logo.png")
             form(method="POST")
                 div
                     h3  
@@ -20,14 +19,14 @@ html(lang="ko")
                     input(name="id" type="text" id="id" maxlength="18", required)
                 div
                     h3  
-                        label(for="pwd") 비밀번호
-                        span.checkpwd &nbsp;
-                    input.pwd(name="pwd" type="password" id="pwd" minlength="6" maxlength="16", required)
+                        label(for="pwd1") 비밀번호
+                        span.checkPwd1 &nbsp;
+                    input.pwd1(name="pwd1" type="password" id="pwd1" minlength="6" maxlength="16", required)
                 div
                     h3  
                         label(for="pwd2") 비밀번호 재확인
                         span.checkPwd2
-                    input.pwd2(name="pwd2" type="password" id="pwd2" minlength="6" maxlength="16", required)
+                    input.pwd2(name="pwd2" type="password" id="pwd2" minlength="6" maxlength="16" onchange="check_pw()", required)
                 div 
                     h3  
                         label(for="name") 이름
@@ -70,7 +69,5 @@ html(lang="ko")
             div.errorBox
                 if errorMessage
                     p #{errorMessage}
-
-
-script(src="/static/js/join.js") 
-
+    script(src="/js/join.js") 
+        

@@ -3,15 +3,15 @@ html(lang="ko")
     head  
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        link(rel="stylesheet" href="/static/css/base.css")
+        link(rel="stylesheet" href="/css/base.css")
 
     body      
         .sideBar
             div
                 a(href="/")
-                    img.logo(src="/static/images/logo.png")
+                    img.logo(src="/images/logo.png")
             .profileBox
-                img.profileImage(src="/static/images/profile_icon.png" alt = "profile_icon")
+                img.profileImage(src="/images/profile_icon.png" alt = "profile_icon")
                 .userName #{loggedInUser.username}
                 .userID (#{loggedInUser.id})
                 .campus 한양대학교 에리카 캠퍼스
@@ -31,7 +31,7 @@ html(lang="ko")
                     a(href="#") 정보
                     a(href="#") 장터
             .searchBar
-                img(src="/static/images/icon_fire.png")
+                img(src="/images/icon_fire.png")
                 p 인기 게시글:
                 a(href="#").popularPost 홈페이지 서비스 아이디어 공모전 안내
                 form(method="GET").searchBox

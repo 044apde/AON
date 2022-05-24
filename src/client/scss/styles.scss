@@ -3,7 +3,11 @@
 @import "./config/_varibles.scss";
 // Components
 // Screen
-@import "./screens/base.scss";
+@import"./screens/base.scss";
+@import"./screens/home.scss";
+@import"./screens/join.scss";
+@import"./screens/login.scss";
+@import"./screens/profile.scss";
 // Defaults
 a {
     color: inherit;
