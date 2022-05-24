@@ -4,6 +4,7 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import rootRouter from "./routers/rootRouter";
 import userRouter from "./routers/userRouter";
+import boardRouter from "./routers/boardRouter";
 import { localsMiddleware, protectorMiddleware } from "./middlewares";
 
 const app = express();
@@ -38,5 +39,6 @@ app.use("/css", express.static("css"));
 app.use("/js", express.static("js"));
 app.use("/", rootRouter);
 app.use("/user", userRouter);
+app.use("/board", boardRouter);
 
 export default app;
