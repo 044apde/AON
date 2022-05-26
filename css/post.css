@@ -1,0 +1,53 @@
+.wrap {
+    margin-top: 20px;
+}
+
+input {
+    padding-left: 10px;
+    width: 988px;
+    color: black;
+}
+
+button:hover {
+    font-weight: bold;
+}
+
+.boardTitle {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.postBox {}
+
+.postBox .title {
+    display: block;
+    height: 40px;
+}
+
+.postBox .text {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 480px;
+    padding-top: 15px;
+    padding-left: 10px;
+    width: 990px;
+    color: black;
+    resize: none;
+}
+
+.postBtn {
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: white;
+    border: 1.5px solid #50586C;
+}
+
+span.errormessage {
+    color: red;
+}
+
+.varBoardName {
+    display: none;
+}

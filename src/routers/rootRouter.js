@@ -1,19 +1,18 @@
 import express from "express";
 import { home, getLogin, postLogin, getJoin, postJoin, logout } from "../controllers/rootController"
-import { protectorMiddleware, publicOnlyMiddleware } from "../middlewares";
-import app from "../server";
+import { boardNameMiddleware } from "../middlewares";
 
 const rootRouter = express.Router();
 
 rootRouter.route("/")
-    .get(protectorMiddleware, home);
+    .get(home);
 rootRouter.route("/login")
-    .get(protectorMiddleware, getLogin)
-    .post(protectorMiddleware, postLogin);
+    .get(getLogin)
+    .post(postLogin);
 rootRouter.route("/join")
-    .get(protectorMiddleware, getJoin)
-    .post(protectorMiddleware, postJoin);
+    .get(getJoin)
+    .post(postJoin);
 rootRouter.route("/logout")
-    .get(protectorMiddleware, logout)
+    .get(logout)
 
 export default rootRouter;

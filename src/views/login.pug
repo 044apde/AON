@@ -1,17 +1,17 @@
 doctype html
 html(lang="ko")
     head
+        include partials/favicon.pug
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible' content='IE=edge')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         link(rel="stylesheet" href="/css/login.css")
         link(rel="preconnect" href="https://fonts.googleapis.com")
-        script(type='text/javascript' src='js/login.js')
-        title Meal With Me
+        title MWM: login
     body
         form(method = "POST").wrap
             .imgcontainer   
-                img.avatar(src="/images/icon_logo_login.png" alt = `logo`)
+                img.avatar(src="/images/logo_2.png" alt = `logo`)
             .container
                 input.id(type='text' placeholder='아이디를 입력하세요' name='id' required='')
                 input.pwd(type='password' placeholder='비밀번호를 입력하세요' name='pwd' required='')

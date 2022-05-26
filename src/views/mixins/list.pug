@@ -1,2 +1,5 @@
-minxin post(posts)
-    div
+mixin post(post)
+    tr
+        th #{post.title}
+        th #{post.id}
+        th #{post.createdAt.getFullYear(2)}/#{post.createdAt.getDate()}/#{post.createdAt.getDate()} 

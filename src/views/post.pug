@@ -1,0 +1,20 @@
+extends base.pug
+include mixins/list.pug
+
+block content 
+
+    head 
+        title MWM: Writing
+        link(rel="stylesheet" href="/css/post.css")
+
+    .head
+        p.boardTitle #{boardName} 게시판
+    .wrap 
+        form(method="POST").postBox
+            input(placeholder="제목을 입력해주세요.", name="title").title
+            input(value=boardName, name="boardName").varBoardName   
+            textarea(name="text", cols="30", rows="10", placeholder="본문을 입력해주세요").text
+            button.postBtn(type="submit") 작성완료
+            button.postBtn(type="submit") 작성취소
+            if errorMessage
+                span.errormessage #{errorMessage}
