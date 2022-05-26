@@ -9,6 +9,7 @@ export const localsMiddleware = (req, res, next) => {
 export const boardNameMiddleware = (req, res, next) => {
     res.locals.boardName = req.session.boardName;
     res.locals.url = req.originalUrl;
+    console.log(res.locals.boardName);
     return next();
 };
 
