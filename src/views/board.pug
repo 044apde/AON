@@ -16,8 +16,6 @@ block content
                 th 날짜
             each post in posts
                 +post(post)
-            else 
-                tr 
-                    th 아직 글이 존재하지 않습니다.
-                    th MWM
-                    th 
+            tr.spacedList
+
+    script(src="/js/board.js") 
