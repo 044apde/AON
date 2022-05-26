@@ -3,7 +3,6 @@ import User from "../models/User";
 import bcrypt from "bcrypt";
 
 export const home = async(req, res) => {
-    console.log(req.url);
     return res.render("home", { pageTitle: "Home", path: req.url });
 };
 

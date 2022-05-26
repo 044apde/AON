@@ -16,11 +16,12 @@ a {
     color: black;
     text-decoration: none;
     cursor: pointer;
+    color: #50586C;
     /* no underline */
 }
 
 a:hover {
-    text-decoration: underline
+    text-decoration: none;
 }
 
 .sideBar {
@@ -117,8 +118,6 @@ a:hover {
     padding-left: 5px;
     font-size: 24px;
     font-weight: bold;
-    text-decoration: underline;
-    text-underline-position: under;
     color: #50586C;
 }
 
@@ -126,8 +125,6 @@ a:hover {
     margin-left: 50px;
     font-size: 24px;
     font-weight: bold;
-    text-decoration: underline;
-    text-underline-position: under;
     color: #50586C;
 }
 
@@ -203,8 +200,6 @@ a:hover {
 .dropbtn {
     font-size: 24px;
     font-weight: bold;
-    text-decoration: underline;
-    text-underline-position: under;
     color: #50586C;
 }
 

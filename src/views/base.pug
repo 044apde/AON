@@ -1,6 +1,7 @@
 doctype html
 html(lang="ko")
     head  
+        include partials/favicon.pug
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         link(rel="stylesheet" href="/css/base.css")
@@ -20,8 +21,8 @@ html(lang="ko")
         .main
             .nav
                 .big
-                    a.E(href="/") 홈
-                    a.E(href ="#") 뮴팅
+                    a.E.home(href="/") 홈
+                    a.E.MWM(href ="#") 뮴팅
                     .dropdown
                         a.dropbtn 게시판
                         .dropdown-content
@@ -29,7 +30,7 @@ html(lang="ko")
                             a(href='/board/자유') 자유 게시판
                             a(href='/board/정보') 정보 게시판
                             a(href='/board/장터') 장터 게시판
-                            a(href='/board/장터') 취창업 게시판
+                            a(href='/board/취창업') 취창업 게시판
             .searchBar
                 div
                     img(src="/images/icon_fire.png")
@@ -38,6 +39,8 @@ html(lang="ko")
                 div
                     form(method="GET").searchBox
                         input(placeholder="검색어를 입력하세요" type="text" name="keyword")
-            //- contents 아래에 code 작성하면 됩니다
             .contents
                 block content
+
+    script(src="/js/base.js")
+    include partials/favicon.pug

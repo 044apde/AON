@@ -1,15 +1,23 @@
 extends base.pug
+include mixins/list.pug
 block content 
     head 
         link(rel="stylesheet" href="/css/board.css")
         title=boardName
 
     .wrap
-        p.boardTitle #{boardName}
+        .head
+            p.boardTitle #{boardName} 게시판
+            a(href=boardName+"/post").linkWriter 글쓰기
         table.boardTable
             tr 
                 th 제목
-                th 글쓴이 
-                th 조회수
-
-    include partials/footer
+                th ID 
+                th 날짜
+            each post in posts
+                +post(post)
+            else 
+                tr 
+                    th 아직 글이 존재하지 않습니다.
+                    th MWM
+                    th 

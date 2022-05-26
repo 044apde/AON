@@ -35,8 +35,10 @@ app.use((req, res, next) => {
 app.use(localsMiddleware);
 app.use("/static", express.static("assets"));
 app.use("/images", express.static("images"));
+app.use("/favicon", express.static("favicon.ico"));
 app.use("/css", express.static("css"));
 app.use("/js", express.static("js"));
+app.use(protectorMiddleware)
 app.use("/", rootRouter);
 app.use("/user", userRouter);
 app.use("/board", boardRouter);
