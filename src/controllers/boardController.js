@@ -2,9 +2,9 @@ import Post from "../models/Post.js";
 
 export const moveToSpecificBoard = async(req, res) => {
     req.session.boardName = boardName;
-    const boardName = req.params.boardName
+    const boardName = req.params.boardName;
     try {
-        const posts = await Post.find({});
+        const posts = await Post.find({ boardName: boardName });
         return res.render("board", { boardName, posts });
     } catch {
         return res.render("post", { boardName });
