@@ -10,12 +10,7 @@ block content
             p.boardTitle #{boardName} 게시판
             a(href=boardName+"/post").linkWriter 글쓰기
         table.boardTable
-            tr 
-                th 제목
-                th ID 
-                th 날짜
             each post in posts
                 +post(post)
-            tr.spacedList
 
     script(src="/js/board.js") 

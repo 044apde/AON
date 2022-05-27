@@ -22,7 +22,7 @@
 
 .boardTable {
     width: 990px;
-    border: 1px solid red;
+    border: 1px black solid;
 }
 
 .boardTable th:nth-child(1) {
@@ -34,9 +34,23 @@
 }
 
 .boardTable th:nth-child(3) {
-    width: 15%;
+    width: 20%;
 }
 
-th {
-    border: solid blue;
+th,
+th a {
+    font-size: 18px;
+}
+
+.boardTable .title {
+    text-align: left;
+}
+
+th a {
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+tr {
+    height: 28px;
 }

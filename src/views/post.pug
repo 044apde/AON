@@ -13,7 +13,7 @@ block content
         form(method="POST").postBox
             input(placeholder="제목을 입력해주세요.", name="title").title
             input(value=boardName, name="boardName").varBoardName   
-            textarea(name="text", cols="30", rows="10", placeholder="본문을 입력해주세요").text
+            textarea(name="text", cols="30", rows="10", placeholder="본문을 입력해주세요", maxlength="1000").text
             button.postBtn(type="submit") 작성완료
             button.postBtn(type="submit") 작성취소
             if errorMessage
