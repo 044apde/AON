@@ -3,7 +3,20 @@ import User from "../models/User";
 import bcrypt from "bcrypt";
 
 export const home = async(req, res) => {
-    return res.render("home", { pageTitle: "Home", path: req.url });
+    const post_last = await Post.findOne({}).sort({ createdAt: -1 });
+    req.session.title = post_last.title;
+    req.session.link = post_last._id;
+    req.session.boardName = post_last.boardName;
+    try {
+        const posts_자유 = await Post.find({ boardName: "자유" }).sort({ createdAt: -1 }).limit(7);
+        const posts_정보 = await Post.find({ boardName: "정보" }).sort({ createdAt: -1 }).limit(7);
+        const posts_취창업 = await Post.find({ boardName: "취창업" }).sort({ createdAt: -1 }).limit(7);
+        const posts_장터 = await Post.find({ boardName: "장터" }).sort({ createdAt: -1 }).limit(7);
+        return res.render("home", { posts_자유, posts_정보, posts_취창업, posts_장터 });
+    } catch {
+        console.log("fuck!");
+        return res.render("home", {});
+    };
 };
 
 export const getLogin = (req, res) => {

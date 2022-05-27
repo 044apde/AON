@@ -1,0 +1,87 @@
+.watch p {
+    font-weight: 300;
+}
+
+.boardTitle {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.content {
+    background-color: white;
+    width: 990px;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.head {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    padding-top: 5px;
+}
+
+.head .postedTitle {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.head p {
+    margin: 0;
+}
+
+.postedTitle {
+    width: 76%;
+}
+
+.postedTitle p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.postedDate {
+    height: 100%;
+    width: 24%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+}
+
+.postedDate img {
+    height: 45px;
+}
+
+.postedDate .dataBox p {
+    padding-left: 10px;
+}
+
+.body {
+    height: fit-content;
+    margin-top: 10px;
+}
+
+.body textarea {
+    border: none;
+    padding-left: 10px;
+    resize: none;
+    width: 98.5%;
+    overflow: auto;
+    background-color: white;
+    white-space: pre-wrap;
+}

@@ -49,3 +49,59 @@
     height: 198px;
     margin-bottom: 5px;
 }
+
+.boxes.mwm {
+    background-color: #F2ACC9;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.mwmTitle {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.mwmTitle .title {
+    width: fit-content;
+    height: fit-content;
+}
+
+.mwmTitle .title p {
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+.linkToMWM {
+    width: 160px;
+}
+
+.linkToMWM p {
+    font-size: 25px;
+}
+
+.mwmText:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    font-weight: 700;
+}
+
+.title a {
+    font-size: 16px;
+}
+
+.title a:hover {}
+
+.title {
+    height: 25px;
+}

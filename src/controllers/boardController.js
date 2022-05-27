@@ -4,9 +4,10 @@ export const moveToSpecificBoard = async(req, res) => {
     const boardName = req.params.boardName;
     req.session.boardName = boardName;
     try {
-        const posts = await Post.find({ boardName: boardName });
+        const posts = await Post.find({ boardName: boardName }).sort({ createdAt: -1 }).limit(20);
         return res.render("board", { boardName, posts });
     } catch {
+        console.log("fuck!");
         return res.render("post", { boardName });
     };
 };
@@ -46,3 +47,9 @@ export const postPost = async(req, res) => {
     };
     return res.end();
 };
+
+export const getWatch = async(req, res) => {
+    const _id = req.params._id;
+    const post = await Post.findById({ _id });
+    return res.render("watch", { post });
+}

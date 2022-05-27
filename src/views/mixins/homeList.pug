@@ -1,0 +1,4 @@
+mixin post(post)
+    tr
+        td.title 
+            a(href="/board/"+ post.boardName + "/" + post._id) #{post.title}

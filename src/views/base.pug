@@ -5,6 +5,9 @@ html(lang="ko")
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
         link(rel="stylesheet" href="/css/base.css")
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap' rel='stylesheet')
 
     body      
         .sideBar
@@ -31,11 +34,15 @@ html(lang="ko")
                             a(href='/board/정보') 정보 게시판
                             a(href='/board/장터') 장터 게시판
                             a(href='/board/취창업') 취창업 게시판
+                            a(href='/board/취창업') 맛집 게시판
+                            a(href='/board/취창업') 학과 게시판
+                            a(href='/board/취창업') 동아리 게시판
+                            a(href='/board/취창업') 학회 게시판
             .searchBar
                 div
                     img(src="/images/icon_fire.png")
                     p 인기 게시글
-                    a(href="#").popularPost=`"홈페이지 서비스 아이디어 공모전 안내"`
+                    a(href="/board/"+ boardName + "/" + link).popularPost "#{title}"
                 div
                     form(method="GET").searchBox
                         input(placeholder="검색어를 입력하세요" type="text" name="keyword")

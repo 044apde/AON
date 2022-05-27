@@ -1,4 +1,6 @@
 extends base.pug
+include mixins/homeList.pug
+
 block content 
     head 
         title MWM: Home
@@ -6,56 +8,65 @@ block content
 
     .content
         .boardBox
+            .boxes.mwm
+                .mwmTitle 
+                    .title 
+                        p 뮴팅&nbsp;
+                    .linkToMWM
+                        p 밥 한끼 어때요?
+                .mwmText 
+                    a(href="/mwm") MWM만의 서비스, 밥 한끼 먹는 가벼운 만남 
+                
             .boxes
                 .linkToBoard 
-                    a(href="/board/free") 자유 게시판
+                    a(href="/board/자유") 자유 게시판
                 .postList
-                    table
-                        tbody(id="list")
-            .boxes
-                .linkToBoard 
-                    a(href="") 동아리 게시판
-                .postList
-                    table
-                        tbody(id="list")
+                    table 
+                        each post in posts_자유 
+                            +post(post)
         .boardBox
             .boxes
                 .linkToBoard 
-                    a(href="") 장터 게시판
+                    a(href="") 정보 게시판
                 .postList
-                    table
-                        tbody(id="list")
+                    table 
+                        each post in posts_정보 
+                            +post(post)
             .boxes
                 .linkToBoard 
-                    a(href="") 홍보 게시판
+                    a(href="") 취창업 게시판
                 .postList
-                    table
-                        tbody(id="list")
+                    table 
+                        each post in posts_취창업 
+                            +post(post)
         .boardBox
             .boxes
                 .linkToBoard 
                     a(href="") 맛집 게시판
                 .postList
-                    table
-                        tbody(id="list")
-            .boxes
-                .linkToBoard 
-                    a(href="") 취업 게시판
-                .postList
-                    table
-                        tbody(id="list")
-        .boardBox
+                    table 
+                        each post in posts_장터 
+                            +post(post)
             .boxes
                 .linkToBoard 
                     a(href="") 학과 게시판
                 .postList
                     table
                         tbody(id="list")
+        .boardBox
             .boxes
                 .linkToBoard 
                     a(href="") 동아리 게시판
                 .postList
                     table
                         tbody(id="list")
+            .boxes
+                .linkToBoard 
+                    a(href="") 학회 게시판
+                .postList
+                    table
+                        tbody(id="list")
 
     include partials/footer
+
+    script(src="/js/home.js") 

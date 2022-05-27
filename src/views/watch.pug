@@ -1,0 +1,26 @@
+extends base.pug
+include mixins/list.pug
+block content 
+
+    head 
+        link(rel="stylesheet" href="/css/watch.css")
+        title=boardName
+
+    p.boardTitle #{boardName} 게시판
+
+    .watch
+        .content 
+            .head
+                div.postedTitle
+                    p #{post.title}
+                div.postedDate
+                    .imgBox   
+                        img(src="/images/icon_watch_profile.png")
+                    .dataBox
+                        p #{post.id}
+                        p #{post.createdAt.getMonth()}월 #{post.createdAt.getDate()}일 #{post.createdAt.getHours()}시 #{post.createdAt.getMinutes()}분  
+                        
+            .body
+                textarea(disabled, maxlength = "500")  #{post.text}
+
+    script(src="/js/watch.js") 
