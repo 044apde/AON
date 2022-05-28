@@ -1,4 +1,6 @@
+import { redirect } from "express/lib/response";
 import Post from "../models/Post.js";
+import Comments from "../models/Comments.js";
 
 export const moveToSpecificBoard = async(req, res) => {
     const boardName = req.params.boardName;
@@ -19,8 +21,6 @@ export const getPost = (req, res) => {
 
 export const postPost = async(req, res) => {
     const { title, text, boardName } = req.body;
-    console.log(req.body);
-    console.log(boardName);
     const id = res.locals.loggedInUser.id;
     if (title.length == 0) {
         return res.status(400).render("post", {
@@ -51,5 +51,35 @@ export const postPost = async(req, res) => {
 export const getWatch = async(req, res) => {
     const _id = req.params._id;
     const post = await Post.findById({ _id });
+    req.session.idPosting = post.id;
     return res.render("watch", { post });
+}
+
+export const deletePost = async(req, res) => {
+    const _id = req.params._id;
+    const boardName = req.params.boardName;
+    console.log(boardName);
+    try {
+        await Post.findByIdAndDelete({ _id });
+        console.log(_id + ` are deleted!`);
+        return res.redirect("/board/" + boardName);
+    } catch {
+        console.log("fail deleting");
+        return res.redirect("/");
+    }
+}
+
+export const createComment = async(req, res) => {
+    const { session: { user }, body: { text }, params: { _id }, } = req;
+    const post = await Post.findById(_id);
+    if (!post) {
+        return res.sendStatus(404);
+    };
+    const comment = Comments.create({
+        text,
+        owner: user.id,
+        post: _id,
+    });
+
+    return res.sendStatus(201);
 }

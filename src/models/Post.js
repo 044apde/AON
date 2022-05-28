@@ -10,6 +10,8 @@ const postSchema = new mongoose.Schema({
         views: { type: Number, default: 0, required: true },
         like: { type: Number, default: 0, required: true }
     },
+    // owner: { type: mongoose.Schema.Types.ObjectId, required: true, ref: "User" },
+    // comments: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "Comments" }],
 });
 
 const Post = mongoose.model("Post", postSchema);

@@ -27,14 +27,14 @@ block content
         .boardBox
             .boxes
                 .linkToBoard 
-                    a(href="") 정보 게시판
+                    a(href="/board/정보") 정보 게시판
                 .postList
                     table 
                         each post in posts_정보 
                             +post(post)
             .boxes
                 .linkToBoard 
-                    a(href="") 취창업 게시판
+                    a(href="/board/취창업") 취창업 게시판
                 .postList
                     table 
                         each post in posts_취창업 
@@ -42,30 +42,33 @@ block content
         .boardBox
             .boxes
                 .linkToBoard 
-                    a(href="") 맛집 게시판
+                    a(href="/board/한대신문") 한대 신문
                 .postList
                     table 
-                        each post in posts_장터 
+                        each post in posts_한대신문 
                             +post(post)
             .boxes
                 .linkToBoard 
-                    a(href="") 학과 게시판
+                    a(href="/board/학과") 학과 게시판
                 .postList
-                    table
-                        tbody(id="list")
+                    table 
+                        each post in posts_학과 
+                            +post(post)
         .boardBox
             .boxes
                 .linkToBoard 
-                    a(href="") 동아리 게시판
+                    a(href="/board/동아리") 동아리 게시판
                 .postList
-                    table
-                        tbody(id="list")
+                    table 
+                        each post in posts_동아리 
+                            +post(post)
             .boxes
                 .linkToBoard 
-                    a(href="") 학회 게시판
+                    a(href="/board/학회") 학회 게시판
                 .postList
-                    table
-                        tbody(id="list")
+                    table 
+                        each post in posts_학회 
+                            +post(post)
 
     include partials/footer
 

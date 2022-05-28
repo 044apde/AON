@@ -11,6 +11,8 @@ const userSchema = new mongoose.Schema({
     gender: { required: true, type: String, maxlength: 5 },
     createdAt: { type: Date, required: true, default: Date.now, trim: true },
     grade: { required: true, type: String, default: "일반회원" },
+    posts: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "Post" }],
+    comments: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "Comments" }],
 });
 
 userSchema.pre("save", async function() {

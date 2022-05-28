@@ -1,17 +1,19 @@
 import { render } from "express/lib/response";
+import Post from "../src/models/Post.js"
 
-export const localsMiddleware = (req, res, next) => {
+export const localsMiddleware = async(req, res, next) => {
     res.locals.loggedIn = Boolean(req.session.loggedIn);
     res.locals.loggedInUser = req.session.user || {};
-    res.locals.title = req.session.title;
-    res.locals.link = req.session.link;
     res.locals.boardName = req.session.boardName;
-    console.log(res.locals.boardName);
+    const post_last = await Post.findOne({}).sort({ createdAt: -1 }) || {};
+    res.locals.title = post_last.title;
+    res.locals.link = post_last._id;
     next();
 };
 
-export const boardNameMiddleware = (req, res, next) => {
+export const boardMiddleware = (req, res, next) => {
     res.locals.boardName = req.session.boardName;
+    res.locals.idPosting = req.session.idPosting;
     res.locals.url = req.originalUrl;
     return next();
 };

@@ -1,0 +1,17 @@
+extends base.pug
+include mixins/list.pug
+
+block content 
+    head 
+        title MWM:search 
+        link(rel="stylesheet", href="/css/searchedPost.css")
+    
+    .searchResultBox
+        .showKeyword
+            p " #{keyword} "의 검색결과
+        .searchResult
+            table
+                each post in posts
+                    +post(post)
+                else 
+                    

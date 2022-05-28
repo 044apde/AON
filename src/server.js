@@ -5,6 +5,7 @@ import MongoStore from "connect-mongo";
 import rootRouter from "./routers/rootRouter";
 import userRouter from "./routers/userRouter";
 import boardRouter from "./routers/boardRouter";
+import apiRouter from "./routers/apiRouter";
 import { localsMiddleware, protectorMiddleware } from "./middlewares";
 
 const app = express();
@@ -16,7 +17,7 @@ app.set("views", process.cwd() + "/src/views");
 app.disable("x-powered-by");
 app.use(logger);
 app.use(express.urlencoded({ extended: true }));
-
+app.use(express.json());
 app.use(
     session({
         secret: process.env.COOKIE_SECRET,
@@ -25,7 +26,6 @@ app.use(
         store: MongoStore.create({ mongoUrl: process.env.DB_URL }),
     })
 );
-
 app.use((req, res, next) => {
     req.sessionStore.all((error, sessions) => {
         next();
@@ -42,5 +42,6 @@ app.use(protectorMiddleware)
 app.use("/", rootRouter);
 app.use("/user", userRouter);
 app.use("/board", boardRouter);
+app.use("/api", apiRouter);
 
 export default app;
