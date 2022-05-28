@@ -17,7 +17,7 @@ block content
                     .imgBox   
                         img(src="/images/icon_watch_profile.png")
                     .dataBox
-                        p #{post.id}
+                        p #{post.owner.userid}
                         p #{post.createdAt.getMonth()}월 #{post.createdAt.getDate()}일 #{post.createdAt.getHours()}시 #{post.createdAt.getMinutes()}분  
 
             .body

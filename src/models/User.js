@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
 const userSchema = new mongoose.Schema({
-    id: { required: true, type: String, maxlength: 18, unique: true },
+    userid: { required: true, type: String, maxlength: 18, unique: true },
     pwd: { required: true, type: String },
     username: { required: true, type: String },
     yy: { required: true, type: String, maxlength: 4, minlength: 2 },
@@ -11,8 +11,8 @@ const userSchema = new mongoose.Schema({
     gender: { required: true, type: String, maxlength: 5 },
     createdAt: { type: Date, required: true, default: Date.now, trim: true },
     grade: { required: true, type: String, default: "일반회원" },
-    posts: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "Post" }],
-    comments: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "Comments" }],
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
+    posts: [{ type: mongoose.Schema.Types.ObjectId, ref: "Post" }],
 });
 
 userSchema.pre("save", async function() {

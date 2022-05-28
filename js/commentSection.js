@@ -4,12 +4,13 @@ const form = document.getElementById("commentForm");
 const handleSubmit = (event) => {
     event.preventDefault();
     const textarea = form.querySelector("textarea");
-    const _id = postContainer.dataset.id;
     const text = textarea.value;
+    const postId = postContainer.dataset.id;
+    console.log(postId);
     if (text === "") {
         return;
     }
-    fetch("/api/board/" + _id + "/comment", {
+    fetch("/api/board/" + postId + "/comment", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

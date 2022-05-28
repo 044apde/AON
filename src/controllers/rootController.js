@@ -56,13 +56,13 @@ export const getJoin = (req, res) => {
 };
 
 export const postJoin = async(req, res) => {
-    const { id, pwd, pwd2, username, yy, mm, dd, gender } = req.body;
+    const { userid, pwd, pwd2, username, yy, mm, dd, gender } = req.body;
     if (pwd !== pwd2) {
         return res.status(400).render("join", {
             errorMessage: "비밀번호가 서로 맞지 않습니다.",
         });
     }
-    const exists = await User.exists({ $or: [{ id }] });
+    const exists = await User.exists({ $or: [{ userid }] });
     if (exists) {
         return res.status(400).render("join", {
             errorMessage: "이미 존재하는 아이디입니다.",
@@ -70,7 +70,7 @@ export const postJoin = async(req, res) => {
     }
     try {
         await User.create({
-            id,
+            userid,
             pwd,
             username,
             yy,
