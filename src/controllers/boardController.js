@@ -65,7 +65,6 @@ export const getWatch = async(req, res) => {
 export const deletePost = async(req, res) => {
     const _id = req.params._id;
     const boardName = req.params.boardName;
-    console.log(boardName);
     try {
         await Post.findByIdAndDelete({ _id });
         console.log(_id + ` are deleted!`);
