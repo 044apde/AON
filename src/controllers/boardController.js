@@ -1,12 +1,12 @@
 import { redirect } from "express/lib/response";
 import Post from "../models/Post.js";
-import Comments from "../models/Comments.js";
+import Comment from "../models/Comments.js";
 
 export const moveToSpecificBoard = async(req, res) => {
     const boardName = req.params.boardName;
     req.session.boardName = boardName;
     try {
-        const posts = await Post.find({ boardName: boardName }).sort({ createdAt: -1 }).limit(20);
+        const posts = await Post.find({ boardName: boardName }).populate("owner").sort({ createdAt: -1 }).limit(20);
         return res.render("board", { boardName, posts });
     } catch {
         console.log("fuck!");
@@ -21,7 +21,7 @@ export const getPost = (req, res) => {
 
 export const postPost = async(req, res) => {
     const { title, text, boardName } = req.body;
-    const id = res.locals.loggedInUser.id;
+    const _id = res.locals.loggedInUser._id;
     if (title.length == 0) {
         return res.status(400).render("post", {
             errorMessage: "제목을 입력해주세요.",
@@ -35,8 +35,8 @@ export const postPost = async(req, res) => {
         await Post.create({
             title,
             text,
-            id,
-            boardName
+            boardName,
+            owner: _id,
         })
         console.log("post done.");
         res.redirect("/board/" + boardName);
@@ -50,8 +50,11 @@ export const postPost = async(req, res) => {
 
 export const getWatch = async(req, res) => {
     const _id = req.params._id;
-    const post = await Post.findById({ _id });
-    req.session.idPosting = post.id;
+    const post = await Post.findById(_id).populate("owner").populate("comments");
+    console.log(post);
+    if (!post) {
+        return res.sendStatus(404);
+    }
     return res.render("watch", { post });
 }
 
@@ -70,16 +73,22 @@ export const deletePost = async(req, res) => {
 }
 
 export const createComment = async(req, res) => {
-    const { session: { user }, body: { text }, params: { _id }, } = req;
-    const post = await Post.findById(_id);
+    const { session: { user }, body: { text }, params: { id }, } = req;
+    const post = await Post.findById(id);
+    console.log(post);
     if (!post) {
         return res.sendStatus(404);
     };
-    const comment = Comments.create({
-        text,
-        owner: user.id,
-        post: _id,
-    });
-
+    try {
+        const comment = await Comment.create({
+            text,
+            owner: user._id,
+            post: id,
+        });
+        post.comments.push(comment._id);
+        post.save();
+    } catch {
+        console.log("sibal");
+    }
     return res.sendStatus(201);
 }

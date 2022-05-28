@@ -18,7 +18,7 @@ html(lang="ko")
             .profileBox
                 img.profileImage(src="/images/icon_profile.png" alt = "profile_icon")
                 .userName #{loggedInUser.username}
-                .userID (#{loggedInUser.id})
+                .userID (#{loggedInUser.userid})
                 .campus 한양대학교 에리카 캠퍼스
                 .grade #{loggedInUser.grade}
                 button.proflieBtn(type='button' onclick = "location.href = '/user/proflie'") 내 정보
