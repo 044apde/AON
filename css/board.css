@@ -25,16 +25,16 @@
     border: 1px black solid;
 }
 
-.boardTable th:nth-child(1) {
-    width: 70%;
+.boardTable td:nth-child(1) {
+    width: 78%;
 }
 
-.boardTable th:nth-child(2) {
+.boardTable td:nth-child(2) {
     width: 15%;
 }
 
-.boardTable th:nth-child(3) {
-    width: 20%;
+.boardTable td:nth-child(3) {
+    width: 16%;
 }
 
 th,

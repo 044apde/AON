@@ -11,6 +11,8 @@ function underlineBoard() {
         mwm.style.textUnderlinePosition = "under";
     } else if (url.match(/^.*proflie.*/)) {
         console.log("Profile");
+    } else if (url.match(/^.*search.*/)) {
+        console.log("search");
     } else {
         home.style.textDecoration = "underline";
         home.style.textUnderlinePosition = "under";

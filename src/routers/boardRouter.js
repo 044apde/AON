@@ -1,17 +1,20 @@
 import express from "express";
-import { moveToSpecificBoard, getPost, postPost, getWatch } from "../controllers/boardController";
-import { boardNameMiddleware } from "../middlewares";
+import { moveToSpecificBoard, getPost, postPost, getWatch, deletePost } from "../controllers/boardController";
+import { boardMiddleware } from "../middlewares";
 
 const boardRouter = express.Router();
 
-boardRouter.use(boardNameMiddleware);
+boardRouter.use(boardMiddleware);
 
 boardRouter.route("/:boardName")
     .get(moveToSpecificBoard);
 boardRouter.route("/:boardName/post")
     .get(getPost)
     .post(postPost);
-boardRouter.route("/:boardName/:_id").get(getWatch);
+boardRouter.route("/:boardName/:_id")
+    .get(getWatch);
+boardRouter.route("/:boardName/:_id/delete")
+    .get(deletePost);
 
 export default boardRouter;
 

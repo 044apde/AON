@@ -3,16 +3,25 @@ import User from "../models/User";
 import bcrypt from "bcrypt";
 
 export const home = async(req, res) => {
-    const post_last = await Post.findOne({}).sort({ createdAt: -1 });
-    req.session.title = post_last.title;
-    req.session.link = post_last._id;
-    req.session.boardName = post_last.boardName;
     try {
         const posts_자유 = await Post.find({ boardName: "자유" }).sort({ createdAt: -1 }).limit(7);
         const posts_정보 = await Post.find({ boardName: "정보" }).sort({ createdAt: -1 }).limit(7);
         const posts_취창업 = await Post.find({ boardName: "취창업" }).sort({ createdAt: -1 }).limit(7);
         const posts_장터 = await Post.find({ boardName: "장터" }).sort({ createdAt: -1 }).limit(7);
-        return res.render("home", { posts_자유, posts_정보, posts_취창업, posts_장터 });
+        const posts_한대신문 = await Post.find({ boardName: "한대신문" }).sort({ createdAt: -1 }).limit(7);
+        const posts_학과 = await Post.find({ boardName: "학과" }).sort({ createdAt: -1 }).limit(7);
+        const posts_동아리 = await Post.find({ boardName: "동아리" }).sort({ createdAt: -1 }).limit(7);
+        const posts_학회 = await Post.find({ boardName: "학회" }).sort({ createdAt: -1 }).limit(7);
+        return res.render("home", {
+            posts_자유,
+            posts_정보,
+            posts_취창업,
+            posts_장터,
+            posts_한대신문,
+            posts_학과,
+            posts_동아리,
+            posts_학회
+        });
     } catch {
         console.log("fuck!");
         return res.render("home", {});
@@ -81,3 +90,22 @@ export const logout = async(req, res) => {
     req.session.destroy();
     return res.redirect("/login");
 };
+
+export const searchPost = async(req, res) => {
+    const keyword = req.query.keyword;
+    if (keyword) {
+        const searchedPost = await Post.find({
+            $or: [{
+                title: {
+                    $regex: new RegExp(keyword, "i")
+                }
+            }, {
+                text: {
+                    $regex: new RegExp(keyword, "i")
+                }
+            }]
+        }).limit(17);
+        return res.render("searchedPost", { keyword, posts: searchedPost });
+    }
+    console.log(keyword);
+}

@@ -83,11 +83,12 @@
 }
 
 .linkToMWM {
-    width: 160px;
+    width: 165px;
 }
 
 .linkToMWM p {
     font-size: 25px;
+    font-family: "Lato", sans-serif;
 }
 
 .mwmText:hover {

@@ -9,18 +9,26 @@ block content
     p.boardTitle #{boardName} 게시판
 
     .watch
-        .content 
+        .content#postContainer(data-id=post._id) 
             .head
-                div.postedTitle
+                .postedTitle
                     p #{post.title}
-                div.postedDate
+                .postedDate
                     .imgBox   
                         img(src="/images/icon_watch_profile.png")
                     .dataBox
                         p #{post.id}
                         p #{post.createdAt.getMonth()}월 #{post.createdAt.getDate()}일 #{post.createdAt.getHours()}시 #{post.createdAt.getMinutes()}분  
-                        
-            .body
-                textarea(disabled, maxlength = "500")  #{post.text}
 
+            .body
+                textarea(disabled, maxlength = "500") #{post.text}
+            if loggedInUser.id == idPosting
+                a(href=`` + post._id + `/delete`) 
+                    button.deletePost 글삭제
+        .post__comments 
+            form.post__comment-form#commentForm
+                textarea(cols="30", rows="10", placeholder="좋은 글을 작성해주세요!") 
+                button 댓글 작성
+ 
     script(src="/js/watch.js") 
+    script(src="/js/commentSection.js") 

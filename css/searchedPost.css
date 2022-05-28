@@ -1,0 +1,47 @@
+.searchResultBox {
+    width: 990px;
+    height: fit-content;
+    max-height: 800px;
+    margin-top: 40px;
+}
+
+.showKeyword {
+    width: 990px;
+    height: 50px;
+    border-bottom: 2px solid gray;
+}
+
+.showKeyword p {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.searchResult {
+    margin-top: 10px;
+}
+
+table {
+    width: 990px;
+}
+
+table {
+    height: 40px;
+}
+
+td {
+    font-size: 18px;
+    height: 30px;
+}
+
+td:nth-child(1) {
+    width: 80%;
+    font-weight: 600;
+}
+
+td:nth-child(2) {
+    width: 10%;
+}
+
+td:nth-child(3) {
+    width: 10%;
+}
