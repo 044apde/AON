@@ -17,8 +17,6 @@ button:hover {
     font-weight: 900;
 }
 
-.postBox {}
-
 .postBox .title {
     display: block;
     height: 40px;

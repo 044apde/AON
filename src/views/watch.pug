@@ -25,10 +25,18 @@ block content
             if loggedInUser.id == idPosting
                 a(href=`` + post._id + `/delete`) 
                     button.deletePost 글삭제
-        .post__comments 
+        .post__add-comments 
             form.post__comment-form#commentForm
-                textarea(cols="30", rows="10", placeholder="좋은 글을 작성해주세요!") 
+                //- textarea(cols="30", rows="10", placeholder="좋은 글을 작성해주세요!")
+                input 
                 button 댓글 작성
+        .post__comments
+            table 
+                each comment in post.comments.reverse()
+                    tr
+                        td.post_comment=comment.text
+                        td=comment_userid
+                        td=comment_createdAt
  
     script(src="/js/watch.js") 
     script(src="/js/commentSection.js") 

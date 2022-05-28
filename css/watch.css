@@ -102,3 +102,55 @@
 .content button:hover {
     font-weight: 600;
 }
+
+.post__add-comments {
+    margin-top: 20px;
+}
+
+.post__add-comments input {
+    resize: none;
+    width: 900px;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 10px;
+    vertical-align: center;
+    border: 1px black solid;
+}
+
+.post__add-comments button {
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: 1px solid #50586C;
+}
+
+.post__comments {
+    margin-top: 20px;
+    width: 990px;
+    margin-bottom: 100px;
+}
+
+.post__comments table {
+    width: 990px;
+    border: 0px;
+}
+
+.post__comments td {
+    background-color: white;
+    font-size: 18px;
+}
+
+.post__comments td:nth-child(1) {
+    width: 70%;
+    border-bottom: 1px gray solid;
+}
+
+.post__comments td:nth-child(2) {
+    width: 15%;
+    border-bottom: 1px gray solid;
+}
+
+.post__comments td:nth-child(3) {
+    width: 15%;
+    border-bottom: 1px gray solid;
+}
