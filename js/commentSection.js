@@ -1,16 +1,16 @@
 const postContainer = document.getElementById("postContainer");
 const form = document.getElementById("commentForm");
 
-const handleSubmit = (event) => {
+const handleSubmit = async(event) => {
     event.preventDefault();
-    const textarea = form.querySelector("textarea");
+    const textarea = form.querySelector("input");
     const text = textarea.value;
     const postId = postContainer.dataset.id;
     console.log(postId);
     if (text === "") {
         return;
     }
-    fetch("/api/board/" + postId + "/comment", {
+    await fetch("/api/board/" + postId + "/comment", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -18,6 +18,7 @@ const handleSubmit = (event) => {
         body: JSON.stringify({ text: text }),
     });
     textarea.value = "";
+    window.location.reload();
 };
 
 if (form) {

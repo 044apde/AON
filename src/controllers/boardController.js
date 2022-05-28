@@ -51,11 +51,15 @@ export const postPost = async(req, res) => {
 export const getWatch = async(req, res) => {
     const _id = req.params._id;
     const post = await Post.findById(_id).populate("owner").populate("comments");
-    console.log(post);
+    const comment_userid = post.owner.userid;
+    const comment_createdAt =
+        post.owner.createdAt.getFullYear() +
+        "/" + post.owner.createdAt.getDate();
+    console.log(comment_userid);
     if (!post) {
         return res.sendStatus(404);
     }
-    return res.render("watch", { post });
+    return res.render("watch", { post, comment_userid, comment_createdAt });
 }
 
 export const deletePost = async(req, res) => {
@@ -75,7 +79,6 @@ export const deletePost = async(req, res) => {
 export const createComment = async(req, res) => {
     const { session: { user }, body: { text }, params: { id }, } = req;
     const post = await Post.findById(id);
-    console.log(post);
     if (!post) {
         return res.sendStatus(404);
     };
