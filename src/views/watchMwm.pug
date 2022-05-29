@@ -1,0 +1,33 @@
+extends base.pug
+include mixins/listMwm.pug
+
+block content 
+    head 
+        link(rel="stylesheet" href="/css/watchMwm.css")
+        title=boardName
+
+    .wrap 
+        .mwmBox#postContainer(data-id=mwm._id) 
+            .infoBox 
+                    p #{mwm.title}
+                    p #{mwm.createdAt.getMonth(0) + 1}/#{mwm.createdAt.getDate()} #{mwm.createdAt.getHours()}:#{mwm.createdAt.getMinutes()}
+                    p #{mwm.ownerId}
+            .textBox
+                textarea(disabled) #{mwm.text}
+        .commentBox
+            .post__add-comments#commentContainer(data-userId=loggedInUser.userid)
+                form.post__comment-form#commentForm
+                    input(maxlength="50") 
+                    button 댓글 작성
+            .post__comments
+                table 
+                    each comment in mwm.comments
+                        tr.post_comment(data-commentId = comment.owner._id)
+                            td#commentOwnerId #{String(comment.ownerId)}
+                            td#commentDate #{comment.createdAt.getMonth(0) + 1}/#{comment.createdAt.getDate()} #{comment.createdAt.getHours()}:#{comment.createdAt.getMinutes()}
+                        tr#border_bottom
+                            td(colspan="2").lastInfo=comment.text
+ 
+    script(src="/js/watch.js") 
+    script(src="/js/mwmCommentSection.js") 
+    script(src="/js/commentOwnerId.js") 

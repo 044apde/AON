@@ -1,5 +1,5 @@
 import express from "express";
-import { mwmboard, getcreateMwm, postcreateMwm } from "../controllers/boardController";
+import { mwmboard, getcreateMwm, postcreateMwm, watchMwm } from "../controllers/boardController";
 
 const mwmRouter = express.Router();
 
@@ -8,5 +8,7 @@ mwmRouter.route("/")
 mwmRouter.route("/create")
     .get(getcreateMwm)
     .post(postcreateMwm);
+mwmRouter.route("/watch/:id")
+    .get(watchMwm);
 
 export default mwmRouter;
