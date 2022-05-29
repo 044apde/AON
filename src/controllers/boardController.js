@@ -52,12 +52,13 @@ export const postPost = async(req, res) => {
 
 export const getWatch = async(req, res) => {
     const _id = req.params._id;
+    const boardName = req.params.boardName;
+    req.session.boardName = boardName;
     const post = await Post.findById(_id).populate("owner").populate("comments");
-    console.log(post);
     if (!post) {
         return res.sendStatus(404);
     }
-    return res.render("watch", { post });
+    return res.render("watch", { post, boardName });
 }
 
 export const deletePost = async(req, res) => {
