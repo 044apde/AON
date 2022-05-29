@@ -1,4 +1,3 @@
-import { render } from "express/lib/response";
 import Post from "../src/models/Post.js"
 
 export const localsMiddleware = async(req, res, next) => {
@@ -11,7 +10,8 @@ export const localsMiddleware = async(req, res, next) => {
     next();
 };
 
-export const boardMiddleware = (req, res, next) => {
+export const boardMiddleware = async(req, res, next) => {
+    console.log(req);
     res.locals.boardName = req.session.boardName;
     res.locals.idPosting = req.session.idPosting;
     res.locals.url = req.originalUrl;

@@ -1,10 +1,11 @@
 import express from "express";
 import { moveToSpecificBoard, getPost, postPost, getWatch, deletePost } from "../controllers/boardController";
-import { boardMiddleware } from "../middlewares";
+import { boardMiddleware, localsMiddleware } from "../middlewares";
 
 const boardRouter = express.Router();
 
 boardRouter.use(boardMiddleware);
+boardRouter.use(localsMiddleware);
 
 boardRouter.route("/:boardName")
     .get(moveToSpecificBoard);
