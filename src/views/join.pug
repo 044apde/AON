@@ -15,18 +15,18 @@ html(lang="ko")
                 div
                     h3  
                         label(for="userid") 아이디
-                        span &nbsp;
+                        span 
                     input(name="userid" type="text" id="id" maxlength="18", required)
                 div
                     h3  
                         label(for="pwd") 비밀번호
-                        span.checkPwd1 &nbsp;
-                    input.pwd1(name="pwd" type="password" id="pwd" minlength="6" maxlength="16", required)
+                        span.checkPwd   &nbsp;
+                    input.pwd(name="pwd" type="password" id="pwd" minlength="6" maxlength="16", required)
                 div
                     h3  
                         label(for="pwd2") 비밀번호 재확인
                         span.checkPwd2
-                    input.pwd2(name="pwd2" type="password" id="pwd2" minlength="6" maxlength="16" onchange="check_pw()", required)
+                    input.pwd2(name="pwd2" type="password" id="pwd2" minlength="6" maxlength="16", required)
                 div 
                     h3  
                         label(for="name") 이름
@@ -69,7 +69,4 @@ html(lang="ko")
             div.errorBox
                 if errorMessage
                     p #{errorMessage}
-
-
-script(src="/js/join.js") 
-        
+        script(src="/js/join.js") 

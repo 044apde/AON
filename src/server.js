@@ -6,6 +6,7 @@ import rootRouter from "./routers/rootRouter";
 import userRouter from "./routers/userRouter";
 import boardRouter from "./routers/boardRouter";
 import apiRouter from "./routers/apiRouter";
+import mwmRouter from "./routers/mwmRouter"
 import { localsMiddleware, protectorMiddleware } from "./middlewares";
 
 const app = express();
@@ -21,8 +22,8 @@ app.use(express.json());
 app.use(
     session({
         secret: process.env.COOKIE_SECRET,
-        resave: false,
-        saveUninitialized: false,
+        resave: true,
+        saveUninitialized: true,
         store: MongoStore.create({ mongoUrl: process.env.DB_URL }),
     })
 );
@@ -40,6 +41,7 @@ app.use("/js", express.static("js"));
 app.use(localsMiddleware);
 app.use(protectorMiddleware)
 app.use("/", rootRouter);
+app.use("/mwm", mwmRouter);
 app.use("/user", userRouter);
 app.use("/board", boardRouter);
 app.use("/api", apiRouter);

@@ -2,5 +2,5 @@ mixin post(post)
     tr
         td.title 
             a(href="/board/"+ boardName + "/" + post._id) #{post.title}
-        td #{post.owner.userid}
+        td #{post.ownerId}
         td #{post.createdAt.getFullYear(2)}/#{post.createdAt.getDate()}

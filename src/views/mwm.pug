@@ -1,0 +1,29 @@
+extends base.pug
+include mixins/list.pug
+
+block content 
+    head 
+        title MWM
+        link(rel="stylesheet" href="/css/mwm.css")   
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Jua&display=swap' rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap' rel='stylesheet')
+
+    body
+        .wrap
+            .infoBox
+                p#mwmTitle   Meal with me 
+                p   [뮴팅 사용법]
+                p   1. 게시판을 둘러보며 같이 식사할 상대를 찾아보세요.
+                p   2. 게시글을 통해 성별, 나이, 회원등급, 희망인원 등을 확인할 수 있습니다.
+                p   3. 뮴팅 페이지 내에서는 카카오톡 오픈채팅방 주소를 주고받는 것이 허용되니, 상대와 약속을 잡고 싶다면 이를 이용해보세요!
+                p   4. 뮴 만들기!
+            .listBox
+                table
+                    each mwm in mwms 
+                        +post(mwm)
+            .createBox 
+                a(href="/mwm/create")
+                    button(type="button") 뮴 만들기
+    script(src="/js/mwm.js") 

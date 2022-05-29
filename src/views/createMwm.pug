@@ -1,0 +1,23 @@
+extends base.pug
+include mixins/list.pug
+
+block content 
+    head 
+        title MWM
+        link(rel="stylesheet" href="/css/createMwm.css")   
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Jua&display=swap' rel='stylesheet')
+
+    body
+        .head 
+            p.mwmTitle MWM
+        .wrap 
+            form(method="POST").postBox
+                input(placeholder="제목을 입력해주세요.", name="title", maxlength="45").title
+                textarea.textarea_text(name="text", cols="30", rows="10", placeholder="본문을 입력해주세요", maxlength="1000").text #{info} 
+                button.postBtn(type="submit") 뮴 완료하기
+                if errorMessage
+                    span.errormessage #{errorMessage}
+
+    script(src="#") 

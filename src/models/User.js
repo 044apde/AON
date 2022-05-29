@@ -9,8 +9,8 @@ const userSchema = new mongoose.Schema({
     mm: { required: true, type: String, maxlength: 2, minlength: 1 },
     dd: { required: true, type: String, maxlength: 2, minlength: 1 },
     gender: { required: true, type: String, maxlength: 5 },
-    createdAt: { type: Date, required: true, default: Date.now, trim: true },
     grade: { required: true, type: String, default: "일반회원" },
+    createdAt: { type: Date, required: true, default: Date.now, trim: true },
     comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
     posts: [{ type: mongoose.Schema.Types.ObjectId, ref: "Post" }],
 });

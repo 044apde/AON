@@ -9,6 +9,7 @@ html(lang="ko")
         link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
         link(href='https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap' rel='stylesheet')
         link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap' rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css2?family=Jua&display=swap' rel='stylesheet')
 
     body      
         .sideBar
@@ -26,7 +27,7 @@ html(lang="ko")
             .nav
                 .big
                     a.E.home(href="/") 홈
-                    a.E.MWM(href ="#") 뮴팅
+                    a.E.MWM(href ="/mwm") 뮴팅
                     .dropdown
                         a.dropbtn 게시판
                         .dropdown-content
@@ -42,7 +43,7 @@ html(lang="ko")
             .searchBar
                 div.popularBox
                     img(src="/images/icon_fire.png")
-                    p 인기 게시글
+                    p 최근 게시글
                     a(href="/board/"+ boardName + "/" + link).popularPost "#{title}"
                 div
                     form(method="GET", action="/search").searchBox

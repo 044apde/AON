@@ -1,11 +1,24 @@
+.head {
+    margin-top: 40px;
+}
+
+.mwmTitle {
+    font-family: 'Jua', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #EC73A5;
+}
+
 .wrap {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 input {
     padding-left: 10px;
     width: 988px;
     color: black;
+    font-weight: 500;
 }
 
 button:hover {
@@ -20,7 +33,6 @@ button:hover {
 .postBox .title {
     display: block;
     height: 40px;
-    font-weight: 500;
 }
 
 .postBox .text {
