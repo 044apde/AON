@@ -1,0 +1,6 @@
+mixin post(post)
+    tr
+        td.title 
+            a(href="/mwm/watch/" + post._id) #{post.title}
+        td #{post.ownerId}
+        td #{post.createdAt.getFullYear(2)}/#{post.createdAt.getDate()}

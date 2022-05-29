@@ -1,4 +1,4 @@
-import { redirect } from "express/lib/response";
+import res, { redirect } from "express/lib/response";
 import Post from "../models/Post.js";
 import Comment from "../models/Comments.js";
 
@@ -136,4 +136,11 @@ export const postcreateMwm = async(req, res) => {
         })
     };
     return res.end();
+}
+
+export const watchMwm = async(req, res) => {
+    const _id = req.params.id;
+    const mwm = await Post.findById(_id).populate("owner").populate("comments");
+    console.log(mwm);
+    return res.render("watchMwm", { mwm });
 }
