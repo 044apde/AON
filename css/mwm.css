@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+}
+
+.wrap {
+    width: 990px;
+    height: 500px;
+    margin-top: 30px;
+}
+
+.infoBox {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    height: fit-content;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+}
+
+#mwmTitle {
+    font-family: 'Jua', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #EC73A5;
+}
+
+.infoBox a {
+    font-weight: bold;
+}
+
+.infoBox a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.listBox {
+    margin-top: 30px;
+    height: 400px;
+}
+
+.createBox {
+    margin-top: 20px;
+}
+
+.listBox {
+    border-radius: 3px;
+    border: 1px black solid;
+}
+
+.listBox table {
+    width: 990px;
+}
+
+.listBox td {
+    background-color: white;
+    font-size: 18px;
+    padding-bottom: 6px;
+    padding-top: 8px;
+}
+
+td a {
+    font-size: 18px;
+}
+
+.listBox td a:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.listBox td:nth-child(1) {
+    padding-left: 5px;
+    width: 70%;
+    border-bottom: 1px gray solid;
+    margin-right: 0px;
+}
+
+.listBox td:nth-child(2) {
+    text-align: center;
+    width: 15%;
+    border-bottom: 1px gray solid;
+}
+
+.listBox td:nth-child(3) {
+    text-align: center;
+    width: 15%;
+    border-bottom: 1px gray solid;
+}
+
+.createBox button {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 30px;
+    width: fit-content;
+    background-color: transparent;
+}
+
+.createBox button:hover {
+    cursor: pointer;
+    font-weight: 500;
+}

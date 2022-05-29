@@ -9,7 +9,7 @@ block content
         .head
             p.boardTitle #{boardName} 게시판
             a(href=boardName+"/post").linkWriter 글쓰기
-        table.boardTable
+        table(style="font-size=20").boardTable
             each post in posts
                 +post(post)
 

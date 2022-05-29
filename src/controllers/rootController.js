@@ -33,8 +33,8 @@ export const getLogin = (req, res) => {
 };
 
 export const postLogin = async(req, res) => {
-    const { id, pwd } = req.body;
-    const user = await User.findOne({ id });
+    const { userid, pwd } = req.body;
+    const user = await User.findOne({ userid });
     if (!user) {
         return res.status(400).render("login", {
             errorMessage: "아이디 혹은 비밀번호가 맞지 않습니다."
@@ -57,6 +57,7 @@ export const getJoin = (req, res) => {
 
 export const postJoin = async(req, res) => {
     const { userid, pwd, pwd2, username, yy, mm, dd, gender } = req.body;
+    console.log(req.body);
     if (pwd !== pwd2) {
         return res.status(400).render("join", {
             errorMessage: "비밀번호가 서로 맞지 않습니다.",
@@ -76,12 +77,12 @@ export const postJoin = async(req, res) => {
             yy,
             mm,
             dd,
-            gender,
+            gender
         });
-        return res.status(200).redirect("/login");
-    } catch {
+        return res.status(201).redirect("/login");
+    } catch (error) {
         return res.status(400).render("join", {
-            errorMessage: "무언가 잘못되었습니다.",
+            errorMessage: "Error",
         });
     }
 };

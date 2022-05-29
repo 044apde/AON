@@ -47,20 +47,21 @@ block content
                     table 
                         each post in posts_한대신문 
                             +post(post)
-            .boxes
-                .linkToBoard 
-                    a(href="/board/학과") 학과 게시판
-                .postList
-                    table 
-                        each post in posts_학과 
-                            +post(post)
-        .boardBox
+
             .boxes
                 .linkToBoard 
                     a(href="/board/동아리") 동아리 게시판
                 .postList
                     table 
                         each post in posts_동아리 
+                            +post(post)
+        .boardBox
+            .boxes
+                .linkToBoard 
+                    a(href="/board/학과") 학과 게시판
+                .postList
+                    table 
+                        each post in posts_학과 
                             +post(post)
             .boxes
                 .linkToBoard 

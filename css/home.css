@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     align-content: stretch;
 }
@@ -47,7 +47,7 @@
 .postList {
     width: var(--post-size);
     height: 198px;
-    margin-bottom: 5px;
+    margin-top: 4px;
 }
 
 .boxes.mwm {

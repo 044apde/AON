@@ -22,21 +22,22 @@ block content
 
             .body
                 textarea(disabled, maxlength = "500") #{post.text}
-            if loggedInUser.id == idPosting
+            if String(loggedInUser.id) == String(post.ownerId)
                 a(href=`` + post._id + `/delete`) 
                     button.deletePost 글삭제
-        .post__add-comments 
+        .post__add-comments#commentContainer(data-userId=loggedInUser.userid)
             form.post__comment-form#commentForm
                 //- textarea(cols="30", rows="10", placeholder="좋은 글을 작성해주세요!")
                 input 
                 button 댓글 작성
         .post__comments
             table 
-                each comment in post.comments.reverse()
-                    tr
+                each comment in post.comments
+                    tr.post_comment(data-commentId = comment.owner._id)
                         td.post_comment=comment.text
-                        td=comment_userid
-                        td=comment_createdAt
+                        td#commentOwnerId #{String(comment.ownerId)}
+                        td #{comment.createdAt.getMonth(0) + 1}/#{comment.createdAt.getDate()} #{comment.createdAt.getHours()}:#{comment.createdAt.getMinutes()}
  
     script(src="/js/watch.js") 
     script(src="/js/commentSection.js") 
+    script(src="/js/commentOwnerId.js") 

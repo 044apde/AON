@@ -29,6 +29,8 @@
     align-items: center;
     align-content: center;
     padding-top: 5px;
+    border-bottom: 1px black solid;
+    padding-bottom: 10px;
 }
 
 .head .postedTitle {
@@ -90,6 +92,7 @@
     overflow: auto;
     background-color: white;
     white-space: pre-wrap;
+    font-weight: bold;
 }
 
 .deletePost {
@@ -123,6 +126,12 @@
     width: 80px;
     border-radius: 10px;
     border: 1px solid #50586C;
+    background-color: white;
+    font-weight: 400;
+}
+
+.post__add-comments button:hover {
+    font-weight: bold;
 }
 
 .post__comments {
@@ -133,25 +142,29 @@
 
 .post__comments table {
     width: 990px;
-    border: 0px;
 }
 
 .post__comments td {
     background-color: white;
     font-size: 18px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
 
 .post__comments td:nth-child(1) {
     width: 70%;
     border-bottom: 1px gray solid;
+    margin-right: 0px;
 }
 
 .post__comments td:nth-child(2) {
+    text-align: center;
     width: 15%;
     border-bottom: 1px gray solid;
 }
 
 .post__comments td:nth-child(3) {
+    text-align: center;
     width: 15%;
     border-bottom: 1px gray solid;
 }

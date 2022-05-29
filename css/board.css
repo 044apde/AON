@@ -21,36 +21,38 @@
 }
 
 .boardTable {
+    margin-top: 20px;
     width: 990px;
     border: 1px black solid;
 }
 
-.boardTable td:nth-child(1) {
-    width: 78%;
+.wrap table {
+    font-size: 30px;
 }
 
-.boardTable td:nth-child(2) {
-    width: 15%;
+td {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 17px;
 }
 
-.boardTable td:nth-child(3) {
-    width: 16%;
-}
-
-th,
-th a {
+td a {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     font-size: 18px;
 }
 
-.boardTable .title {
-    text-align: left;
+td:nth-child(1) {
+    width: 80%;
 }
 
-th a {
-    font-weight: 500;
-    padding-left: 10px;
+td:nth-child(2),
+td:nth-child(3) {
+    text-align: right;
+    padding-right: 5px;
 }
 
-tr {
-    height: 28px;
+td a:hover {
+    font-weight: bold;
 }

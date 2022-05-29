@@ -3,7 +3,7 @@ import Post from "../src/models/Post.js"
 
 export const localsMiddleware = async(req, res, next) => {
     res.locals.loggedIn = Boolean(req.session.loggedIn);
-    res.locals.loggedInUser = req.session.user || {};
+    res.locals.loggedInUser = req.session.user;
     res.locals.boardName = req.session.boardName;
     const post_last = await Post.findOne({}).sort({ createdAt: -1 }) || {};
     res.locals.title = post_last.title;
